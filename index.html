@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asociación de Profesores Asociados da UVigo</title>
+    <title>APAUVIGO - Asociación de Profesorado Asociado da UVigo</title>
     <style>
         * {
             margin: 0;
@@ -17,7 +17,6 @@
             color: #333;
         }
 
-        /* Header */
         header {
             background: linear-gradient(135deg, #2c3e50, #1a4d8c);
             color: white;
@@ -35,7 +34,6 @@
             opacity: 0.9;
         }
 
-        /* Navegación */
         nav {
             background: #1a252f;
             display: flex;
@@ -50,7 +48,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            padding: 0.5rem 1.5rem;
+            padding: 0.5rem 1.2rem;
             margin: 0 0.2rem;
             border-radius: 5px;
             transition: background 0.3s;
@@ -60,7 +58,6 @@
             background: #2c3e50;
         }
 
-        /* Contido principal */
         .container {
             max-width: 1100px;
             margin: auto;
@@ -82,7 +79,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Tarxetas das propostas */
         .propostas {
             display: flex;
             gap: 2rem;
@@ -109,21 +105,6 @@
             margin-bottom: 1rem;
         }
 
-        .tarxeta a {
-            display: inline-block;
-            margin-top: 1rem;
-            background: #1a4d8c;
-            color: white;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .tarxeta a:hover {
-            background: #2c3e50;
-        }
-
-        /* Botón de descarga */
         .btn-descarga {
             background: #27ae60;
             color: white;
@@ -138,7 +119,6 @@
             background: #2ecc71;
         }
 
-        /* Botón intranet */
         .btn-intranet {
             background: #8e44ad;
             color: white;
@@ -154,7 +134,6 @@
             background: #9b59b6;
         }
 
-        /* Calendario */
         .calendario ul {
             list-style: none;
             padding-left: 0;
@@ -168,7 +147,6 @@
             border-left: 4px solid #1a4d8c;
         }
 
-        /* Contacto */
         .contacto {
             text-align: center;
         }
@@ -179,7 +157,50 @@
             font-weight: bold;
         }
 
-        /* Footer */
+        .estatutos-resumo {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-size: 0.9rem;
+        }
+
+        .estatutos-resumo h3 {
+            color: #1a4d8c;
+            margin-top: 1rem;
+        }
+
+        .twitter-container {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .fotos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .foto-placeholder {
+            background: #e0e0e0;
+            width: 200px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            color: #666;
+            font-size: 0.8rem;
+            text-align: center;
+            flex-direction: column;
+        }
+
         footer {
             background: #1a252f;
             color: white;
@@ -198,25 +219,34 @@
 <body>
 
 <header>
-    <h1>📚 Asociación de Profesores Asociados</h1>
-    <p>Universidade de Vigo</p>
+    <h1>📚 APAUVIGO</h1>
+    <p>Asociación de Profesorado Asociado da Universidade de Vigo</p>
     <p>Polo recoñecemento e a estabilidade do noso colectivo</p>
 </header>
 
 <nav>
     <a href="#inicio">Inicio</a>
-    <a href="#propostas">Propostas</a>
-    <a href="#intranet">Intranet</a>
-    <a href="#calendario">Calendario</a>
+    <a href="#quen-somos">Quen somos</a>
+    <a href="#estatutos">Estatutos</a>
+    <a href="#novas">Novas</a>
     <a href="#contacto">Contacto</a>
 </nav>
 
-<div class="container" id="inicio">
-    <div class="seccion">
-        <h2>🚀 Quen somos</h2>
-        <p>A Asociación de Profesores Asociados da Universidade de Vigo representa os intereses de <strong>centos de profesores/as asociados</strong> que día a día contribuímos á docencia universitaria. Loitamos por unha <strong>estabilización xusta</strong> e unha <strong>carreira profesional digna</strong>, en liña coa LOSU.</p>
+<div class="container">
+    
+    <!-- INICIO (presentación breve) -->
+    <div class="seccion" id="inicio">
+        <h2>📌 Benvida/o</h2>
+        <p>A <strong>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</strong> traballa pola estabilización, o recoñecemento e a carreira profesional do profesorado asociado na nosa universidade.</p>
+        <p>📢 <strong>Propostas en marcha:</strong> Estabilización LOU → LOSU e Promoción interna a PPL.</p>
+        <p>🔐 A intranet privada está reservada ás persoas asociadas.</p>
+        
+        <div style="margin-top: 1rem;">
+            <a href="#propostas" class="btn-intranet" style="background: #1a4d8c;">📄 Coñece as nosas propostas</a>
+        </div>
     </div>
 
+    <!-- PROPOSTAS (dentro de inicio, ou sección separada) -->
     <div class="seccion" id="propostas">
         <h2>📄 Propostas normativas</h2>
         <div class="propostas">
@@ -233,41 +263,98 @@
         </div>
     </div>
 
-    <div class="seccion" id="intranet">
-        <h2>🔐 Intranet de socios</h2>
-        <p>Accede ao repositorio privado da asociación, onde atoparás documentos internos, actas e información exclusiva para membros.</p>
-        <div style="text-align: center; margin-top: 1rem;">
-            <a href="https://github.com/asociacion-uvigo/intranet-asociacion" target="_blank" class="btn-intranet">🔒 Acceder á intranet (GitHub)</a>
-        </div>
-        <p style="text-align: center; margin-top: 1rem; font-size: 0.9em; color: #666;">*Só para socios con conta autorizada en GitHub</p>
+    <!-- QUEN SOMOS (texto ampliado) -->
+    <div class="seccion" id="quen-somos">
+        <h2>🚀 Quen somos</h2>
+        <p>A <strong>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</strong> é unha entidade sen ánimo de lucro, constituída ao abeiro da Lei orgánica 1/2002, do 22 de marzo, reguladora do dereito de asociación.</p>
+        
+        <p><strong>Fins principais (artigo 5 dos estatutos):</strong></p>
+        <ul style="margin-left: 2rem; margin-top: 0.5rem; margin-bottom: 1rem;">
+            <li>📌 Velar polos intereses das persoas asociadas.</li>
+            <li>📌 Contribuír ao desenvolvemento dun sistema universitario de calidade.</li>
+            <li>📌 Favorecer as relacións entre a universidade e o entorno empresarial.</li>
+            <li>📌 Incrementar a cualificación profesional do profesorado asociado.</li>
+            <li>📌 Fomentar a investigación e a colaboración entre o colectivo de profesorado asociado das universidades do Estado español e, particularmente, da Universidade de Vigo.</li>
+            <li>📌 Propoñer e apoiar medidas que contribúan ao desenvolvemento da carreira docente do profesorado asociado dentro da universidade.</li>
+            <li>📌 Representar ás persoas asociadas ante os diversos órganos universitarios e ante outras institucións e organismos, tanto públicos coma privados.</li>
+        </ul>
+        
+        <p><strong>Ámbito e domicilio:</strong> A asociación exerce as súas actividades fundamentalmente no ámbito territorial da <strong>Comunidade Autónoma de Galicia</strong> e ten o seu domicilio social na <strong>Facultade de Filoloxía e Tradución da Universidade de Vigo</strong>.</p>
+        
+        <p><strong>Tipos de persoas asociadas (artigo 7):</strong> Fundadoras, numerarias e honorarias.</p>
+        
+        <p><strong>Dereitos (artigo 9):</strong> Participar en actividades, votar, ser informado, impugnar acordos.</p>
+        
+        <p><strong>Obrigas (artigo 10):</strong> Compartir fins, pagar cotas, desempeñar cargos, acatar estatutos.</p>
+        
+        <p><strong>Órganos de goberno (artigo 11):</strong> Presidencia, Xunta Directiva e Asemblea Xeral.</p>
+        
+        <p><a href="#estatutos" style="color: #1a4d8c;">➡️ Ver resumo dos estatutos completos</a></p>
     </div>
 
-    <div class="seccion" id="calendario">
-        <h2>📅 Calendario de accións</h2>
-        <div class="calendario">
-            <ul>
-                <li><strong>16 de abril de 2026</strong> - Debate con candidaturas</li>
-                <li><strong>6 de maio de 2026</strong> - Votacións reitoría</li>
-                <li><strong>1º trimestre 2026-2027</strong> - Negociación das normativas</li>
-            </ul>
+    <!-- ESTATUTOS (resumo) -->
+    <div class="seccion" id="estatutos">
+        <h2>📜 Estatutos da APAUVIGO (resumo)</h2>
+        <div class="estatutos-resumo">
+            <h3>Capítulo I - Da asociación en xeral</h3>
+            <p><strong>Artigo 1º.</strong> Constitúese unha asociación sen ánimo de lucro coa denominación "Asociación de Profesorado Asociado da Universidade de Vigo".</p>
+            <p><strong>Artigo 2º.</strong> Domicilio social: Facultade de Filoloxía e Tradución, UVigo.</p>
+            <p><strong>Artigo 3º.</strong> Ámbito territorial: Comunidade Autónoma de Galicia.</p>
+            <p><strong>Artigo 4º.</strong> Constituída por tempo indefinido.</p>
+            
+            <h3>Capítulo II - Dos asociados e asociadas</h3>
+            <p><strong>Artigo 6º.</strong> Poden ser integrantes: profesorado asociado en activo na UVigo, quen o exerceu con posterioridade ao 1 de xaneiro de 2002, e persoas que contribúan aos fins da asociación.</p>
+            
+            <h3>Capítulo III - Órganos da asociación</h3>
+            <p><strong>Artigos 12º-15º.</strong> A Presidencia é elixida por 1 ano. A Xunta Directiva está formada por presidente/a, vicepresidente/a, secretario/a, tesoureiro/a e 3 vocais. A Asemblea Xeral é o órgano supremo.</p>
+            
+            <h3>Capítulo IV - Réxime económico</h3>
+            <p><strong>Artigos 29º-35º.</strong> Mantense con cotas, doazóns e subvencións. Os recursos non se poden distribuír entre as persoas asociadas.</p>
+            
+            <h3>Capítulo VI - Modificación e disolución</h3>
+            <p><strong>Artigos 37º-40º.</strong> Os estatutos modifícanse por Asemblea Xeral Extraordinaria con 2/3 dos votos.</p>
+            
+            <p style="margin-top: 1rem; font-style: italic;">Documento inscrito no Rexistro de Asociacións. Data: 25 de marzo de 2013.</p>
         </div>
+        <p style="margin-top: 1rem;"><a href="#" style="color: #1a4d8c;">📄 Descargar estatutos completos en PDF (próximamente)</a></p>
     </div>
 
+    <!-- NOVAS + TWITTER + FOTOS -->
+    <div class="seccion" id="novas">
+        <h2>📰 Novas e actualizacións</h2>
+        
+        <div class="twitter-container">
+            <h3>🐦 Asociación Estatal de Profesorado Asociado (AEPA)</h3>
+            <p>Síguenos e manténte informado a través da conta oficial:</p>
+            <a href="https://twitter.com/AEPA_es" target="_blank" class="btn-intranet" style="background: #1DA1F2; margin-top: 0.5rem;">➡️ Visitar @AEPA_es en Twitter</a>
+            <p style="margin-top: 0.8rem; font-size: 0.8rem;">*Abrirase nunha nova lapela. Alí podes ver toda a actividade e novidades da asociación estatal.</p>
+        </div>
+        
+        <h3>📸 Galería de imaxes</h3>
+        <div class="fotos">
+            <div class="foto-placeholder">📷 Reunión con candidaturas<br>(16 abril 2026)</div>
+            <div class="foto-placeholder">📷 Asemblea da asociación<br>(próximamente)</div>
+            <div class="foto-placeholder">📷 Xuntanza con reitoría<br>(próximamente)</div>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; font-size: 0.8rem;">*As imaxes actualizaranse coas actividades da asociación.</p>
+    </div>
+
+    <!-- CONTACTO -->
     <div class="seccion contacto" id="contacto">
         <h2>📧 Contacto</h2>
         <p>Escríbenos para calquera dúbida ou suxestión:</p>
         <p><a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
+        <p>📍 Domicilio social: Facultade de Filoloxía e Tradución, UVigo</p>
     </div>
 </div>
 
 <footer>
-    <p>Asociación de Profesores Asociados da Universidade de Vigo</p>
+    <p>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</p>
     <p>Pontevedra, 2026</p>
 </footer>
 
 <script>
     // Cando teñas as URLs raw dos PDF, substitúe os "#" polas URLs reais
-    // Exemplo:
     // document.getElementById('descarga1').href = 'https://raw.githubusercontent.com/asociacion-uvigo/intranet-asociacion/main/proposta_estabilizacion.pdf';
     // document.getElementById('descarga2').href = 'https://raw.githubusercontent.com/asociacion-uvigo/intranet-asociacion/main/proposta_promocion_ppl.pdf';
 </script>
