@@ -17,6 +17,7 @@
             color: #333;
         }
 
+        /* ENCABEZAMENTO ANTERIOR */
         header {
             background: linear-gradient(135deg, #2c3e50, #1a4d8c);
             color: white;
@@ -79,11 +80,22 @@
             margin-bottom: 1.5rem;
         }
 
+        /* SECCIÓN INTRANET */
+        .intranet {
+            background: #e8f4fd;
+            border: 2px solid #1a4d8c;
+        }
+
+        .intranet h2 {
+            color: #1a4d8c;
+        }
+
         .propostas {
             display: flex;
             gap: 2rem;
             flex-wrap: wrap;
             justify-content: center;
+            margin-top: 1rem;
         }
 
         .tarxeta {
@@ -132,6 +144,51 @@
 
         .btn-intranet:hover {
             background: #9b59b6;
+        }
+
+        .btn-twitter {
+            background: #1DA1F2;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .btn-twitter:hover {
+            background: #0c85d0;
+        }
+
+        .proteccion {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            text-align: center;
+        }
+
+        .proteccion input {
+            padding: 0.5rem;
+            margin: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .proteccion button {
+            background: #1a4d8c;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contrasinal-error {
+            color: red;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
         }
 
         .calendario ul {
@@ -219,104 +276,98 @@
 <body>
 
 <header>
-    <h1>📚 APAUVIGO</h1>
-    <p>Asociación de Profesorado Asociado da Universidade de Vigo</p>
+    <h1>📚 Asociación de Profesores Asociados</h1>
+    <p>Universidade de Vigo</p>
     <p>Polo recoñecemento e a estabilidade do noso colectivo</p>
 </header>
 
 <nav>
     <a href="#inicio">Inicio</a>
     <a href="#quen-somos">Quen somos</a>
+    <a href="#intranet">Intranet socios</a>
     <a href="#estatutos">Estatutos</a>
     <a href="#novas">Novas</a>
     <a href="#contacto">Contacto</a>
 </nav>
 
 <div class="container">
-    
-    <!-- INICIO (presentación breve) -->
+    <!-- INICIO -->
     <div class="seccion" id="inicio">
         <h2>📌 Benvida/o</h2>
         <p>A <strong>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</strong> traballa pola estabilización, o recoñecemento e a carreira profesional do profesorado asociado na nosa universidade.</p>
-        <p>📢 <strong>Propostas en marcha:</strong> Estabilización LOU → LOSU e Promoción interna a PPL.</p>
-        <p>🔐 A intranet privada está reservada ás persoas asociadas.</p>
-        
-        <div style="margin-top: 1rem;">
-            <a href="#propostas" class="btn-intranet" style="background: #1a4d8c;">📄 Coñece as nosas propostas</a>
-        </div>
+        <p>🔐 A <strong>intranet de socios</strong> está reservada ás persoas asociadas. Solicita o contrasinal escribíndonos ao correo.</p>
     </div>
 
-    <!-- PROPOSTAS (dentro de inicio, ou sección separada) -->
-    <div class="seccion" id="propostas">
-        <h2>📄 Propostas normativas</h2>
-        <div class="propostas">
-            <div class="tarxeta">
-                <h3>📑 Estabilización LOU → LOSU</h3>
-                <p>Proposta de normativa para a estabilización do profesorado asociado mediante concurso de méritos con valoración preferente da experiencia docente.</p>
-                <a href="#" class="btn-descarga" id="descarga1">📎 Descargar PDF</a>
-            </div>
-            <div class="tarxeta">
-                <h3>👨‍🏫 Promoción interna a PPL</h3>
-                <p>Procedemento para a promoción de profesorado asociado doutor a profesorado permanente laboral (contratado doutor / permanente laboral).</p>
-                <a href="#" class="btn-descarga" id="descarga2">📎 Descargar PDF</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- QUEN SOMOS (texto ampliado) -->
+    <!-- QUEN SOMOS -->
     <div class="seccion" id="quen-somos">
         <h2>🚀 Quen somos</h2>
-        <p>A <strong>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</strong> é unha entidade sen ánimo de lucro, constituída ao abeiro da Lei orgánica 1/2002, do 22 de marzo, reguladora do dereito de asociación.</p>
+        <p>A <strong>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</strong> é unha entidade sen ánimo de lucro, constituída ao abeiro da Lei orgánica 1/2002.</p>
         
-        <p><strong>Fins principais (artigo 5 dos estatutos):</strong></p>
+        <p><strong>Fins principais:</strong></p>
         <ul style="margin-left: 2rem; margin-top: 0.5rem; margin-bottom: 1rem;">
             <li>📌 Velar polos intereses das persoas asociadas.</li>
             <li>📌 Contribuír ao desenvolvemento dun sistema universitario de calidade.</li>
             <li>📌 Favorecer as relacións entre a universidade e o entorno empresarial.</li>
             <li>📌 Incrementar a cualificación profesional do profesorado asociado.</li>
-            <li>📌 Fomentar a investigación e a colaboración entre o colectivo de profesorado asociado das universidades do Estado español e, particularmente, da Universidade de Vigo.</li>
-            <li>📌 Propoñer e apoiar medidas que contribúan ao desenvolvemento da carreira docente do profesorado asociado dentro da universidade.</li>
-            <li>📌 Representar ás persoas asociadas ante os diversos órganos universitarios e ante outras institucións e organismos, tanto públicos coma privados.</li>
+            <li>📌 Fomentar a investigación e a colaboración entre o colectivo.</li>
+            <li>📌 Propoñer medidas para a carreira docente do profesorado asociado.</li>
+            <li>📌 Representar ás persoas asociadas ante órganos universitarios e institucións.</li>
         </ul>
         
-        <p><strong>Ámbito e domicilio:</strong> A asociación exerce as súas actividades fundamentalmente no ámbito territorial da <strong>Comunidade Autónoma de Galicia</strong> e ten o seu domicilio social na <strong>Facultade de Filoloxía e Tradución da Universidade de Vigo</strong>.</p>
-        
-        <p><strong>Tipos de persoas asociadas (artigo 7):</strong> Fundadoras, numerarias e honorarias.</p>
-        
-        <p><strong>Dereitos (artigo 9):</strong> Participar en actividades, votar, ser informado, impugnar acordos.</p>
-        
-        <p><strong>Obrigas (artigo 10):</strong> Compartir fins, pagar cotas, desempeñar cargos, acatar estatutos.</p>
-        
-        <p><strong>Órganos de goberno (artigo 11):</strong> Presidencia, Xunta Directiva e Asemblea Xeral.</p>
-        
-        <p><a href="#estatutos" style="color: #1a4d8c;">➡️ Ver resumo dos estatutos completos</a></p>
+        <p><strong>Domicilio social:</strong> Facultade de Filoloxía e Tradución, Universidade de Vigo.</p>
+        <p><strong>Ámbito territorial:</strong> Comunidade Autónoma de Galicia.</p>
     </div>
 
-    <!-- ESTATUTOS (resumo) -->
+    <!-- INTRANET PARA SOCIOS -->
+    <div class="seccion intranet" id="intranet">
+        <h2>🔐 Intranet para socios</h2>
+        <p>Esta sección contén as <strong>propostas normativas</strong> da asociación. A descarga dos PDF está protexida para uso exclusivo das persoas asociadas.</p>
+        
+        <div class="propostas">
+            <div class="tarxeta">
+                <h3>📑 Estabilización LOU → LOSU</h3>
+                <p>Proposta de normativa para a estabilización do profesorado asociado mediante concurso de méritos con valoración preferente da experiencia docente.</p>
+                <div id="descarga1-protexida">
+                    <a href="#" class="btn-descarga" id="descarga1" style="pointer-events: none; opacity: 0.5;">🔒 Descargar PDF (socios)</a>
+                </div>
+            </div>
+            <div class="tarxeta">
+                <h3>👨‍🏫 Promoción interna a PPL</h3>
+                <p>Procedemento para a promoción de profesorado asociado doutor a profesorado permanente laboral.</p>
+                <div id="descarga2-protexida">
+                    <a href="#" class="btn-descarga" id="descarga2" style="pointer-events: none; opacity: 0.5;">🔒 Descargar PDF (socios)</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="proteccion" id="zona-contrasinal">
+            <p><strong>🔐 Zona privada para socios</strong></p>
+            <p>Introduce o contrasinal para acceder ás descargas:</p>
+            <input type="password" id="contrasinal" placeholder="Contrasinal">
+            <button onclick="comprobarContrasinal()">Acceder</button>
+            <div id="erro-contrasinal" class="contrasinal-error"></div>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem;">*Se non tes o contrasinal, solicítao en <a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
+        </div>
+    </div>
+
+    <!-- ESTATUTOS -->
     <div class="seccion" id="estatutos">
-        <h2>📜 Estatutos da APAUVIGO (resumo)</h2>
+        <h2>📜 Estatutos da APAUVIGO</h2>
         <div class="estatutos-resumo">
             <h3>Capítulo I - Da asociación en xeral</h3>
             <p><strong>Artigo 1º.</strong> Constitúese unha asociación sen ánimo de lucro coa denominación "Asociación de Profesorado Asociado da Universidade de Vigo".</p>
             <p><strong>Artigo 2º.</strong> Domicilio social: Facultade de Filoloxía e Tradución, UVigo.</p>
-            <p><strong>Artigo 3º.</strong> Ámbito territorial: Comunidade Autónoma de Galicia.</p>
-            <p><strong>Artigo 4º.</strong> Constituída por tempo indefinido.</p>
+            <p><strong>Artigo 5º.</strong> Fins principais: velar polos intereses das persoas asociadas, contribuír á calidade universitaria, fomentar a investigación, propor medidas para a carreira docente, e representar o colectivo.</p>
             
-            <h3>Capítulo II - Dos asociados e asociadas</h3>
+            <h3>Capítulo II - Dos asociados</h3>
             <p><strong>Artigo 6º.</strong> Poden ser integrantes: profesorado asociado en activo na UVigo, quen o exerceu con posterioridade ao 1 de xaneiro de 2002, e persoas que contribúan aos fins da asociación.</p>
             
-            <h3>Capítulo III - Órganos da asociación</h3>
-            <p><strong>Artigos 12º-15º.</strong> A Presidencia é elixida por 1 ano. A Xunta Directiva está formada por presidente/a, vicepresidente/a, secretario/a, tesoureiro/a e 3 vocais. A Asemblea Xeral é o órgano supremo.</p>
+            <h3>Capítulo III - Órganos de goberno</h3>
+            <p><strong>Artigos 12º-15º.</strong> Presidencia (1 ano), Xunta Directiva (presidente/a, vicepresidente/a, secretario/a, tesoureiro/a, 3 vocais), Asemblea Xeral.</p>
             
             <h3>Capítulo IV - Réxime económico</h3>
-            <p><strong>Artigos 29º-35º.</strong> Mantense con cotas, doazóns e subvencións. Os recursos non se poden distribuír entre as persoas asociadas.</p>
-            
-            <h3>Capítulo VI - Modificación e disolución</h3>
-            <p><strong>Artigos 37º-40º.</strong> Os estatutos modifícanse por Asemblea Xeral Extraordinaria con 2/3 dos votos.</p>
-            
-            <p style="margin-top: 1rem; font-style: italic;">Documento inscrito no Rexistro de Asociacións. Data: 25 de marzo de 2013.</p>
+            <p><strong>Artigos 29º-35º.</strong> Mantense con cotas, doazóns e subvencións. Recursos non distribuíbles.</p>
         </div>
-        <p style="margin-top: 1rem;"><a href="#" style="color: #1a4d8c;">📄 Descargar estatutos completos en PDF (próximamente)</a></p>
     </div>
 
     <!-- NOVAS + TWITTER + FOTOS -->
@@ -325,9 +376,9 @@
         
         <div class="twitter-container">
             <h3>🐦 Asociación Estatal de Profesorado Asociado (AEPA)</h3>
-            <p>Síguenos e manténte informado a través da conta oficial:</p>
-            <a href="https://twitter.com/AEPA_es" target="_blank" class="btn-intranet" style="background: #1DA1F2; margin-top: 0.5rem;">➡️ Visitar @AEPA_es en Twitter</a>
-            <p style="margin-top: 0.8rem; font-size: 0.8rem;">*Abrirase nunha nova lapela. Alí podes ver toda a actividade e novidades da asociación estatal.</p>
+            <p>Síguenos en Twitter para estar ao día das novidades do colectivo a nivel estatal:</p>
+            <a href="https://twitter.com/estatalsocia2" target="_blank" class="btn-twitter">➡️ Visitar @estatalsocia2 en Twitter</a>
+            <p style="margin-top: 0.8rem; font-size: 0.85rem;">*Abrirase nunha nova lapela. Alí podes ver toda a actividade e novidades da asociación estatal.</p>
         </div>
         
         <h3>📸 Galería de imaxes</h3>
@@ -345,6 +396,7 @@
         <p>Escríbenos para calquera dúbida ou suxestión:</p>
         <p><a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
         <p>📍 Domicilio social: Facultade de Filoloxía e Tradución, UVigo</p>
+        <p>🔑 <strong>Solicita o contrasinal da intranet</strong> escribíndonos ao correo.</p>
     </div>
 </div>
 
@@ -354,9 +406,37 @@
 </footer>
 
 <script>
-    // Cando teñas as URLs raw dos PDF, substitúe os "#" polas URLs reais
-    // document.getElementById('descarga1').href = 'https://raw.githubusercontent.com/asociacion-uvigo/intranet-asociacion/main/proposta_estabilizacion.pdf';
-    // document.getElementById('descarga2').href = 'https://raw.githubusercontent.com/asociacion-uvigo/intranet-asociacion/main/proposta_promocion_ppl.pdf';
+    // CONTRASINAL PARA ACCEDER ÁS DESCARGAS (cámbialo polo que queiras)
+    const CONTRASINAL_CORRECTO = "asociados2026";
+    
+    // URLs raw dos PDF (substitúe polas túas cando as teñas)
+    const URL_PDF1 = "#";
+    const URL_PDF2 = "#";
+    
+    function comprobarContrasinal() {
+        const contrasinalIntroducido = document.getElementById('contrasinal').value;
+        const erroDiv = document.getElementById('erro-contrasinal');
+        
+        if (contrasinalIntroducido === CONTRASINAL_CORRECTO) {
+            const btn1 = document.getElementById('descarga1');
+            const btn2 = document.getElementById('descarga2');
+            
+            btn1.href = URL_PDF1;
+            btn2.href = URL_PDF2;
+            btn1.style.pointerEvents = "auto";
+            btn1.style.opacity = "1";
+            btn2.style.pointerEvents = "auto";
+            btn2.style.opacity = "1";
+            btn1.innerHTML = "📎 Descargar PDF";
+            btn2.innerHTML = "📎 Descargar PDF";
+            
+            document.getElementById('zona-contrasinal').style.display = "none";
+            erroDiv.style.color = "green";
+            erroDiv.innerHTML = "✅ Acceso concedido. Xa podes descargar os PDF.";
+        } else {
+            erroDiv.innerHTML = "❌ Contrasinal incorrecto. Se non o tes, solicítao no correo da asociación.";
+        }
+    }
 </script>
 
 </body>
