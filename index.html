@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asociación de Profesores Asociados da UVigo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #1a4d8c);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Navegación */
+        nav {
+            background: #1a252f;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.2rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #2c3e50;
+        }
+
+        /* Contido principal */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .seccion {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .seccion h2 {
+            color: #1a4d8c;
+            border-left: 5px solid #1a4d8c;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Tarxetas das propostas */
+        .propostas {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tarxeta {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 250px;
+            transition: transform 0.3s;
+        }
+
+        .tarxeta:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarxeta h3 {
+            color: #1a4d8c;
+            margin-bottom: 1rem;
+        }
+
+        .tarxeta a {
+            display: inline-block;
+            margin-top: 1rem;
+            background: #1a4d8c;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .tarxeta a:hover {
+            background: #2c3e50;
+        }
+
+        /* Botón de descarga */
+        .btn-descarga {
+            background: #27ae60;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .btn-descarga:hover {
+            background: #2ecc71;
+        }
+
+        /* Botón intranet */
+        .btn-intranet {
+            background: #8e44ad;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        .btn-intranet:hover {
+            background: #9b59b6;
+        }
+
+        /* Calendario */
+        .calendario ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .calendario li {
+            background: white;
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            border-radius: 5px;
+            border-left: 4px solid #1a4d8c;
+        }
+
+        /* Contacto */
+        .contacto {
+            text-align: center;
+        }
+
+        .contacto a {
+            color: #1a4d8c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            nav a { padding: 0.5rem 0.8rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📚 Asociación de Profesores Asociados</h1>
+    <p>Universidade de Vigo</p>
+    <p>Polo recoñecemento e a estabilidade do noso colectivo</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#propostas">Propostas</a>
+    <a href="#intranet">Intranet</a>
+    <a href="#calendario">Calendario</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="container" id="inicio">
+    <div class="seccion">
+        <h2>🚀 Quen somos</h2>
+        <p>A Asociación de Profesores Asociados da Universidade de Vigo representa os intereses de <strong>centos de profesores/as asociados</strong> que día a día contribuímos á docencia universitaria. Loitamos por unha <strong>estabilización xusta</strong> e unha <strong>carreira profesional digna</strong>, en liña coa LOSU.</p>
+    </div>
+
+    <div class="seccion" id="propostas">
+        <h2>📄 Propostas normativas</h2>
+        <div class="propostas">
+            <div class="tarxeta">
+                <h3>📑 Estabilización LOU → LOSU</h3>
+                <p>Proposta de normativa para a estabilización do profesorado asociado mediante concurso de méritos con valoración preferente da experiencia docente.</p>
+                <a href="#" class="btn-descarga" id="descarga1">📎 Descargar PDF</a>
+            </div>
+            <div class="tarxeta">
+                <h3>👨‍🏫 Promoción interna a PPL</h3>
+                <p>Procedemento para a promoción de profesorado asociado doutor a profesorado permanente laboral (contratado doutor / permanente laboral).</p>
+                <a href="#" class="btn-descarga" id="descarga2">📎 Descargar PDF</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="seccion" id="intranet">
+        <h2>🔐 Intranet de socios</h2>
+        <p>Accede ao repositorio privado da asociación, onde atoparás documentos internos, actas e información exclusiva para membros.</p>
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="https://github.com/asociacion-uvigo/intranet-asociacion" target="_blank" class="btn-intranet">🔒 Acceder á intranet (GitHub)</a>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; font-size: 0.9em; color: #666;">*Só para socios con conta autorizada en GitHub</p>
+    </div>
+
+    <div class="seccion" id="calendario">
+        <h2>📅 Calendario de accións</h2>
+        <div class="calendario">
+            <ul>
+                <li><strong>16 de abril de 2026</strong> - Debate con candidaturas</li>
+                <li><strong>6 de maio de 2026</strong> - Votacións reitoría</li>
+                <li><strong>1º trimestre 2026-2027</strong> - Negociación das normativas</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="seccion contacto" id="contacto">
+        <h2>📧 Contacto</h2>
+        <p>Escríbenos para calquera dúbida ou suxestión:</p>
+        <p><a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
+    </div>
+</div>
+
+<footer>
+    <p>Asociación de Profesores Asociados da Universidade de Vigo</p>
+    <p>Pontevedra, 2026</p>
+</footer>
+
+<script>
+    // Cando teñas as URLs raw dos PDF, substitúe os "#" polas URLs reais
+    // Exemplo:
+    // document.getElementById('descarga1').href = 'https://raw.githubusercontent.com/asociacion-uvigo/intranet-asociacion/main/proposta_estabilizacion.pdf';
+    // document.getElementById('descarga2').href = 'https://raw.githubusercontent.com/asociacion-uvigo/intranet-asociacion/main/proposta_promocion_ppl.pdf';
+</script>
+
+</body>
+</html>
