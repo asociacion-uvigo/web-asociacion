@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APAUVIGO - Asociación de Profesorado Asociado da UVigo</title>
     <style>
-        /* TIPOGRAFÍA ROBOTO */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
         * {
@@ -26,7 +25,6 @@
             background-repeat: no-repeat;
         }
 
-        /* BANNER PRINCIPAL */
         .banner {
             background-image: url('https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/baner_fondo.jpg');
             background-size: cover;
@@ -70,7 +68,6 @@
             margin-top: 0.5rem;
         }
 
-        /* MENÚ */
         nav {
             background: #1a252f;
             display: flex;
@@ -120,7 +117,6 @@
             font-weight: 500;
         }
 
-        /* TARXETAS PROPOSTAS */
         .propostas {
             display: flex;
             gap: 2rem;
@@ -138,11 +134,12 @@
             min-width: 260px;
             text-align: center;
             border-bottom: 3px solid #ffc107;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .tarxeta:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
 
         .tarxeta h3 {
@@ -159,6 +156,11 @@
             display: inline-block;
             margin-top: 1rem;
             font-weight: 500;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-descarga:hover {
+            transform: scale(1.05);
         }
 
         .btn-correo {
@@ -206,7 +208,6 @@
             cursor: pointer;
         }
 
-        /* CALENDARIO */
         .calendario ul {
             list-style: none;
             padding-left: 0;
@@ -221,7 +222,6 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        /* CAROUSEL */
         .carousel-container {
             position: relative;
             max-width: 800px;
@@ -295,7 +295,6 @@
             background: #1a4d8c;
         }
 
-        /* GALERÍA DE FOTOS (grid) */
         .galeria {
             display: flex;
             flex-wrap: wrap;
@@ -311,6 +310,11 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             width: 250px;
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .foto:hover {
+            transform: translateY(-5px);
         }
 
         .foto img {
@@ -362,7 +366,6 @@
 </head>
 <body>
 
-<!-- BANNER CON LOGO -->
 <div class="banner">
     <div class="banner-contenido">
         <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/Logo_PAUVigo.jpg" alt="Logo APAUVIGO">
@@ -372,50 +375,46 @@
     </div>
 </div>
 
-<!-- MENÚ COMPLETO -->
 <nav>
     <a href="#inicio">Inicio</a>
     <a href="#quen-somos">Quen somos</a>
-    <a href="#faite-socio">🤝 Faite socio ou socia</a>
+    <a href="#faite-socio">Faite socio ou socia</a>
     <a href="#intranet">Intranet socios</a>
     <a href="#estatutos">Estatutos</a>
     <a href="#novas">Novas</a>
-    <a href="#blog">📝 Blog (en construción)</a>
+    <a href="#blog">Blog (en construción)</a>
     <a href="#contacto">Contacto</a>
 </nav>
 
 <div class="container">
-    <!-- INICIO -->
     <section class="seccion" id="inicio">
-        <h2>📌 Benvida/o</h2>
+        <h2>Benvida/o</h2>
         <p style="text-align: center;">A <strong>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</strong> traballa pola estabilización, o recoñecemento e a carreira profesional do profesorado asociado na nosa universidade.</p>
     </section>
 
-    <!-- QUEN SOMOS -->
     <section class="seccion" id="quen-somos">
-        <h2>🚀 Quen somos</h2>
+        <h2>Quen somos</h2>
         <p>A APAUVIGO é unha entidade sen ánimo de lucro, constituída ao abeiro da Lei orgánica 1/2002.</p>
         <ul style="margin-left: 2rem; margin-top: 1rem;">
-            <li>📌 Velar polos intereses das persoas asociadas.</li>
-            <li>📌 Contribuír ao desenvolvemento dun sistema universitario de calidade.</li>
-            <li>📌 Favorecer as relacións entre a universidade e o entorno empresarial.</li>
-            <li>📌 Incrementar a cualificación profesional do profesorado asociado.</li>
-            <li>📌 Fomentar a investigación e a colaboración entre o colectivo.</li>
-            <li>📌 Propoñer medidas para a carreira docente do profesorado asociado.</li>
-            <li>📌 Representar as persoas asociadas ante órganos universitarios e institucións.</li>
+            <li>Velar polos intereses das persoas asociadas.</li>
+            <li>Contribuír ao desenvolvemento dun sistema universitario de calidade.</li>
+            <li>Favorecer as relacións entre a universidade e o entorno empresarial.</li>
+            <li>Incrementar a cualificación profesional do profesorado asociado.</li>
+            <li>Fomentar a investigación e a colaboración entre o colectivo.</li>
+            <li>Propoñer medidas para a carreira docente do profesorado asociado.</li>
+            <li>Representar as persoas asociadas ante órganos universitarios e institucións.</li>
         </ul>
         <p style="margin-top: 1rem;"><strong>Domicilio social:</strong> Facultade de Filoloxía e Tradución, Universidade de Vigo.</p>
     </section>
 
-    <!-- FAITE SOCIO -->
     <section class="seccion" id="faite-socio">
-        <h2>🤝 Faite socio ou socia da APAUVIGO</h2>
+        <h2>Faite socio ou socia da APAUVIGO</h2>
         <p style="text-align: center;">Se es profesorado asociado da UVigo (ou o fuches con posterioridade ao 2002) e queres formar parte do noso colectivo, envía un correo electrónico coa túa solicitude.</p>
         <div style="text-align: center; margin-top: 1.5rem;">
-            <a href="mailto:profesoradoasociado@uvigo.gal" class="btn-correo">📧 Enviar solicitude por correo</a>
+            <a href="mailto:profesoradoasociado@uvigo.gal" class="btn-correo">Enviar solicitude por correo</a>
         </div>
         <details style="margin-top: 1.5rem;">
-            <summary style="cursor: pointer; color: #1a4d8c; font-weight: bold;">📋 Información que debes incluír</summary>
+            <summary style="cursor: pointer; color: #1a4d8c; font-weight: bold;">Información que debes incluír</summary>
             <div style="margin-top: 1rem; padding: 1rem; background: #f4f4f4; border-radius: 10px;">
                 <ul>
                     <li>Nome e apelidos</li>
@@ -428,40 +427,38 @@
         </details>
     </section>
 
-    <!-- INTRANET -->
     <section class="seccion" id="intranet">
-        <h2>🔐 Intranet para socios</h2>
+        <h2>Intranet para socios</h2>
         <div class="propostas">
             <div class="tarxeta">
-                <h3>📑 Estabilización LOU → LOSU</h3>
+                <h3>Estabilización LOU → LOSU</h3>
                 <p>Proposta de normativa para a estabilización do profesorado asociado mediante concurso de méritos con valoración preferente da experiencia docente.</p>
                 <div id="descarga1-protexida">
-                    <a href="#" class="btn-descarga" id="descarga1" style="pointer-events: none; opacity: 0.5;">🔒 Descargar PDF (socios)</a>
+                    <a href="#" class="btn-descarga" id="descarga1" style="pointer-events: none; opacity: 0.5;">Descargar PDF (socios)</a>
                 </div>
             </div>
             <div class="tarxeta">
-                <h3>👨‍🏫 Promoción interna a PPL</h3>
+                <h3>Promoción interna a PPL</h3>
                 <p>Procedemento para a promoción de profesorado asociado doutor a profesorado permanente laboral.</p>
                 <div id="descarga2-protexida">
-                    <a href="#" class="btn-descarga" id="descarga2" style="pointer-events: none; opacity: 0.5;">🔒 Descargar PDF (socios)</a>
+                    <a href="#" class="btn-descarga" id="descarga2" style="pointer-events: none; opacity: 0.5;">Descargar PDF (socios)</a>
                 </div>
             </div>
         </div>
         <div class="proteccion" id="zona-contrasinal">
-            <p><strong>🔐 Zona privada para persoas socias</strong></p>
+            <p><strong>Zona privada para persoas socias</strong></p>
             <input type="password" id="contrasinal" placeholder="Contrasinal">
             <button onclick="comprobarContrasinal()">Acceder</button>
             <div id="erro-contrasinal"></div>
         </div>
     </section>
 
-    <!-- ESTATUTOS -->
     <section class="seccion" id="estatutos">
-        <h2>📜 Estatutos da APAUVIGO</h2>
+        <h2>Estatutos da APAUVIGO</h2>
         <div class="estatutos-resumo">
             <h3>Capítulo I - Da asociación en xeral</h3>
             <p><strong>Artigo 1º.</strong> Constitúese unha asociación sen ánimo de lucro coa denominación "Asociación de Profesorado Asociado da Universidade de Vigo".</p>
-            <p><strong>Artigo 5º.</strong> Fins principais: velar polos intereses das persoas associadas, contribuír á calidade universitaria, fomentar a investigación, propor medidas para a carreira docente, e representar o colectivo.</p>
+            <p><strong>Artigo 5º.</strong> Fins principais: velar polos intereses das persoas asociadas, contribuír á calidade universitaria, fomentar a investigación, propor medidas para a carreira docente, e representar o colectivo.</p>
             <h3>Capítulo II - Dos asociados</h3>
             <p><strong>Artigo 6º.</strong> Poden ser integrantes: profesorado asociado en activo na UVigo, quen o exerceu con posterioridade ao 1 de xaneiro de 2002, e persoas que contribúan aos fins da asociación.</p>
             <h3>Capítulo III - Órganos de goberno</h3>
@@ -469,11 +466,9 @@
         </div>
     </section>
 
-    <!-- NOVAS: CAROUSEL + TWITTER + CALENDARIO -->
     <section class="seccion" id="novas">
-        <h2>📰 Novas e actualizacións</h2>
+        <h2>Novas e actualizacións</h2>
         
-        <!-- CAROUSEL -->
         <div class="carousel-container">
             <div class="carousel-slides" id="carouselSlides">
                 <div class="carousel-slide">
@@ -494,13 +489,11 @@
         </div>
         <div class="indicators" id="indicators"></div>
         
-        <!-- TWITTER -->
         <div style="text-align: center; margin: 2rem 0;">
-            <a href="https://twitter.com/estatalsocia2" target="_blank" class="btn-twitter">➡️ Visitar @estatalsocia2 en Twitter</a>
+            <a href="https://twitter.com/estatalsocia2" target="_blank" class="btn-twitter">Visitar @estatalsocia2 en Twitter</a>
         </div>
         
-        <!-- CALENDARIO -->
-        <h3 style="color: #1a4d8c; margin: 1.5rem 0 1rem 0;">📅 Calendario de accións</h3>
+        <h3 style="color: #1a4d8c; margin: 1.5rem 0 1rem 0;">Calendario de accións</h3>
         <div class="calendario">
             <ul>
                 <li><strong>16 de abril de 2026</strong> - Debate con candidaturas</li>
@@ -508,22 +501,37 @@
                 <li><strong>1º trimestre 2026-2027</strong> - Negociación das normativas</li>
             </ul>
         </div>
-    </section>
 
-    <!-- BLOG -->
-    <section class="seccion" id="blog">
-        <h2>📝 Blog da asociación</h2>
-        <p style="text-align: center;">Esta sección está en construción. Pronto publicaremos contidos de interese para o profesorado asociado.</p>
-        <div style="text-align: center; margin-top: 1rem;">
-            <span style="background: #f4f4f4; padding: 0.5rem 1rem; border-radius: 20px;">🚧 En construción - Próximamente 🚧</span>
+        <!-- GALERÍA DE IMAXES -->
+        <h3 style="color: #1a4d8c; margin: 2rem 0 1rem 0;">Galería de actividades</h3>
+        <div class="galeria">
+            <div class="foto">
+                <img src="https://via.placeholder.com/250x180/1a4d8c/ffffff?text=Reunión+candidaturas" alt="Reunión con candidaturas">
+                <p>Reunión con candidaturas - Abril 2026</p>
+            </div>
+            <div class="foto">
+                <img src="https://via.placeholder.com/250x180/2c3e50/ffffff?text=Asemblea+socios" alt="Asemblea socios">
+                <p>Asemblea da asociación - Próximamente</p>
+            </div>
+            <div class="foto">
+                <img src="https://via.placeholder.com/250x180/ffc107/1a252f?text=Xuntanza+reitoría" alt="Xuntanza reitoría">
+                <p>Xuntanza con reitoría - Próximamente</p>
+            </div>
         </div>
     </section>
 
-    <!-- CONTACTO -->
+    <section class="seccion" id="blog">
+        <h2>Blog da asociación</h2>
+        <p style="text-align: center;">Esta sección está en construción. Pronto publicaremos contidos de interese para o profesorado associado.</p>
+        <div style="text-align: center; margin-top: 1rem;">
+            <span style="background: #f4f4f4; padding: 0.5rem 1rem; border-radius: 20px;">En construción - Próximamente</span>
+        </div>
+    </section>
+
     <section class="seccion contacto" id="contacto">
-        <h2>📧 Contacto</h2>
+        <h2>Contacto</h2>
         <p><a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
-        <p>📍 Domicilio social: Facultade de Filoloxía e Tradución, UVigo</p>
+        <p>Domicilio social: Facultade de Filoloxía e Tradución, UVigo</p>
     </section>
 </div>
 
@@ -543,15 +551,14 @@
             document.getElementById('descarga2').style.pointerEvents = "auto";
             document.getElementById('descarga1').style.opacity = "1";
             document.getElementById('descarga2').style.opacity = "1";
-            document.getElementById('descarga1').innerHTML = "📎 Descargar PDF";
-            document.getElementById('descarga2').innerHTML = "📎 Descargar PDF";
+            document.getElementById('descarga1').innerHTML = "Descargar PDF";
+            document.getElementById('descarga2').innerHTML = "Descargar PDF";
             document.getElementById('zona-contrasinal').style.display = "none";
         } else {
-            document.getElementById('erro-contrasinal').innerHTML = "❌ Contrasinal incorrecto";
+            document.getElementById('erro-contrasinal').innerHTML = "Contrasinal incorrecto";
         }
     }
     
-    // CAROUSEL
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-slide');
     const totalSlides = slides.length;
