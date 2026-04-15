@@ -101,15 +101,24 @@
             padding: 2rem;
         }
 
-        .seccion {
+        /* Seccións: alternan entre branco e gris claro */
+        .seccion-blanca {
+            background: rgba(255, 255, 255, 0.95);
             padding: 3rem 2rem;
             margin-bottom: 1.5rem;
             border-radius: 15px;
-            background: rgba(255, 255, 255, 0.95);
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .seccion h2 {
+        .seccion-gris {
+            background: rgba(245, 247, 250, 0.95);
+            padding: 3rem 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .seccion-blanca h2, .seccion-gris h2 {
             color: #1a4d8c;
             font-size: 2rem;
             margin-bottom: 1.5rem;
@@ -117,6 +126,7 @@
             font-weight: 500;
         }
 
+        /* Tarxetas con movemento */
         .propostas {
             display: flex;
             gap: 2rem;
@@ -387,28 +397,31 @@
 </nav>
 
 <div class="container">
-    <section class="seccion" id="inicio">
-        <h2> Benvida/o</h2>
+    <!-- INICIO - BRANCO -->
+    <div class="seccion-blanca" id="inicio">
+        <h2>Benvida/o</h2>
         <p style="text-align: center;">A <strong>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</strong> traballa pola estabilización, o recoñecemento e a carreira profesional do profesorado asociado na nosa universidade.</p>
-    </section>
+    </div>
 
-    <section class="seccion" id="quen-somos">
-        <h2> Quen somos</h2>
+    <!-- QUEN SOMOS - GRIS -->
+    <div class="seccion-gris" id="quen-somos">
+        <h2>Quen somos</h2>
         <p>A APAUVIGO é unha entidade sen ánimo de lucro, constituída ao abeiro da Lei orgánica 1/2002.</p>
         <ul style="margin-left: 2rem; margin-top: 1rem;">
-            <li> Velar polos intereses das persoas asociadas.</li>
-            <li> Contribuír ao desenvolvemento dun sistema universitario de calidade.</li>
-            <li> Favorecer as relacións entre a universidade e o entorno empresarial.</li>
-            <li> Incrementar a cualificación profesional do profesorado asociado.</li>
-            <li> Fomentar a investigación e a colaboración entre o colectivo.</li>
-            <li> Propoñer medidas para a carreira docente do profesorado asociado.</li>
-            <li> Representar as persoas asociadas ante órganos universitarios e institucións.</li>
+            <li>Velar polos intereses das persoas asociadas.</li>
+            <li>Contribuír ao desenvolvemento dun sistema universitario de calidade.</li>
+            <li>Favorecer as relacións entre a universidade e o entorno empresarial.</li>
+            <li>Incrementar a cualificación profesional do profesorado asociado.</li>
+            <li>Fomentar a investigación e a colaboración entre o colectivo.</li>
+            <li>Propoñer medidas para a carreira docente do profesorado asociado.</li>
+            <li>Representar as persoas asociadas ante órganos universitarios e institucións.</li>
         </ul>
         <p style="margin-top: 1rem;"><strong>Domicilio social:</strong> Facultade de Filoloxía e Tradución, Universidade de Vigo.</p>
-    </section>
+    </div>
 
-    <section class="seccion" id="faite-socio">
-        <h2> Faite socio ou socia da APAUVIGO</h2>
+    <!-- FAITE SOCIO - BRANCO -->
+    <div class="seccion-blanca" id="faite-socio">
+        <h2>Faite socio ou socia da APAUVIGO</h2>
         <p style="text-align: center;">Se es profesorado asociado da UVigo (ou o fuches con posterioridade ao 2002) e queres formar parte do noso colectivo, envía un correo electrónico coa túa solicitude.</p>
         <div style="text-align: center; margin-top: 1.5rem;">
             <a href="mailto:profesoradoasociado@uvigo.gal" class="btn-correo">Enviar solicitude por correo</a>
@@ -425,10 +438,11 @@
                 </ul>
             </div>
         </details>
-    </section>
+    </div>
 
-    <section class="seccion" id="intranet">
-        <h2> Intranet para socios</h2>
+    <!-- INTRANET - GRIS -->
+    <div class="seccion-gris" id="intranet">
+        <h2>Intranet para socios</h2>
         <div class="propostas">
             <div class="tarxeta">
                 <h3>Estabilización LOU → LOSU</h3>
@@ -451,10 +465,11 @@
             <button onclick="comprobarContrasinal()">Acceder</button>
             <div id="erro-contrasinal"></div>
         </div>
-    </section>
+    </div>
 
-    <section class="seccion" id="estatutos">
-        <h2> Estatutos da APAUVIGO</h2>
+    <!-- ESTATUTOS - BRANCO -->
+    <div class="seccion-blanca" id="estatutos">
+        <h2>Estatutos da APAUVIGO</h2>
         <div class="estatutos-resumo">
             <h3>Capítulo I - Da asociación en xeral</h3>
             <p><strong>Artigo 1º.</strong> Constitúese unha asociación sen ánimo de lucro coa denominación "Asociación de Profesorado Asociado da Universidade de Vigo".</p>
@@ -464,10 +479,11 @@
             <h3>Capítulo III - Órganos de goberno</h3>
             <p><strong>Artigos 12º-15º.</strong> Presidencia (1 ano), Xunta Directiva, Asemblea Xeral.</p>
         </div>
-    </section>
+    </div>
 
-    <section class="seccion" id="novas">
-        <h2> Novas e actualizacións</h2>
+    <!-- NOVAS - GRIS -->
+    <div class="seccion-gris" id="novas">
+        <h2>Novas e actualizacións</h2>
         
         <div class="carousel-container">
             <div class="carousel-slides" id="carouselSlides">
@@ -502,7 +518,6 @@
             </ul>
         </div>
 
-        <!-- GALERÍA DE IMAXES -->
         <h3 style="color: #1a4d8c; margin: 2rem 0 1rem 0;">Galería de actividades</h3>
         <div class="galeria">
             <div class="foto">
@@ -518,21 +533,23 @@
                 <p>Xuntanza con reitoría - Próximamente</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="seccion" id="blog">
-        <h2> Blog da asociación</h2>
+    <!-- BLOG - BRANCO -->
+    <div class="seccion-blanca" id="blog">
+        <h2>Blog da asociación</h2>
         <p style="text-align: center;">Esta sección está en construción. Pronto publicaremos contidos de interese para o profesorado associado.</p>
         <div style="text-align: center; margin-top: 1rem;">
             <span style="background: #f4f4f4; padding: 0.5rem 1rem; border-radius: 20px;">En construción - Próximamente</span>
         </div>
-    </section>
+    </div>
 
-    <section class="seccion contacto" id="contacto">
-        <h2> Contacto</h2>
+    <!-- CONTACTO - GRIS -->
+    <div class="seccion-gris contacto" id="contacto">
+        <h2>Contacto</h2>
         <p><a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
         <p>Domicilio social: Facultade de Filoloxía e Tradución, UVigo</p>
-    </section>
+    </div>
 </div>
 
 <footer>
