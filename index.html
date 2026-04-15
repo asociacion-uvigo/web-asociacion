@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="gl">
-<header style="background-image: url('https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/baner_fondo.jpg'); background-size: cover; background-position: center; width: 100%; min-height: 500px; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0; padding: 0;">
-    <div style="text-align: center; background: rgba(0,0,0,0.6); padding: 2rem 4rem; border-radius: 20px; max-width: 85%;">
-        <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/Logo_PAUVigo.jpg" alt="Logo APAUVIGO" style="max-width: 120px; margin-bottom: 1rem; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));">
-        <h1 style="color: white; font-size: 3rem; margin-bottom: 0.5rem;">APAUVIGO</h1>
-        <p style="color: white; font-size: 1.3rem;">Asociación de Profesorado Asociado da Universidade de Vigo</p>
-        <p style="color: #ffc107; font-size: 1.1rem;">Polo recoñecemento e a estabilidade do noso colectivo</p>
-    </div>
-</header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APAUVIGO - Asociación de Profesorado Asociado da UVigo</title>
     <style>
-        /* TIPOGRAFÍA OFICIAL UVIGO */
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
 
         * {
@@ -19,16 +14,26 @@
         }
 
         body {
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-image: url('https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/fondo_web2.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-        /* Navegación */
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+
+        header {
+            background-image: url('https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/baner_fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
         nav {
             background: #1a252f;
             display: flex;
@@ -38,7 +43,6 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
         nav a {
@@ -54,7 +58,6 @@
         nav a:hover {
             background: #ffc107;
             color: #1a252f;
-            transform: translateY(-2px);
         }
 
         .container {
@@ -63,9 +66,10 @@
             padding: 2rem;
         }
 
-        /* Seccións alternas (branco e gris claro) */
         .seccion {
             padding: 3rem 2rem;
+            margin-bottom: 1rem;
+            border-radius: 15px;
         }
 
         .seccion-clara {
@@ -83,18 +87,11 @@
             text-align: center;
         }
 
-        .seccion h3 {
-            color: #1a4d8c;
-            margin-bottom: 1rem;
-        }
-
-        /* Tarxetas de propostas */
         .propostas {
             display: flex;
             gap: 2rem;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 1rem;
         }
 
         .tarxeta {
@@ -104,32 +101,18 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             flex: 1;
             min-width: 260px;
-            transition: all 0.3s ease;
             text-align: center;
             border-bottom: 3px solid #ffc107;
         }
 
-        .tarxeta:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-
         .btn-descarga {
-            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            background: #27ae60;
             color: white;
             padding: 0.6rem 1.2rem;
             border-radius: 30px;
             text-decoration: none;
             display: inline-block;
             margin-top: 1rem;
-            transition: all 0.3s ease;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-descarga:hover {
-            transform: scale(1.05);
         }
 
         .btn-correo {
@@ -139,28 +122,6 @@
             border-radius: 40px;
             text-decoration: none;
             display: inline-block;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn-correo:hover {
-            background: #2c3e50;
-            transform: scale(1.05);
-        }
-
-        .btn-twitter {
-            background: linear-gradient(135deg, #1DA1F2, #0c85d0);
-            color: white;
-            padding: 0.8rem 1.8rem;
-            border-radius: 40px;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .btn-twitter:hover {
-            transform: scale(1.05);
         }
 
         .proteccion {
@@ -168,144 +129,24 @@
             border: 1px solid #ffc107;
             padding: 1.5rem;
             border-radius: 15px;
-            margin: 1.5rem 0;
             text-align: center;
+            margin-top: 2rem;
         }
 
         .proteccion input {
-            padding: 0.7rem 1rem;
+            padding: 0.5rem;
             margin: 0.5rem;
-            border: 2px solid #ddd;
             border-radius: 30px;
-            width: 200px;
+            border: 1px solid #ccc;
         }
 
         .proteccion button {
             background: #1a4d8c;
             color: white;
             border: none;
-            padding: 0.7rem 1.5rem;
+            padding: 0.5rem 1rem;
             border-radius: 30px;
             cursor: pointer;
-        }
-
-        .calendario ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .calendario li {
-            background: white;
-            margin: 0.8rem 0;
-            padding: 1rem;
-            border-radius: 12px;
-            border-left: 4px solid #ffc107;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .estatutos-resumo {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 15px;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .estatutos-resumo h3 {
-            color: #1a4d8c;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .twitter-container {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 15px;
-            text-align: center;
-            margin-top: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .carousel-container {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .carousel-slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-slide {
-            min-width: 100%;
-            position: relative;
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
-
-        .carousel-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.7));
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        button.prev, button.next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            padding: 1rem;
-            cursor: pointer;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-        }
-
-        button.prev { left: 10px; }
-        button.next { right: 10px; }
-
-        .indicators {
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-        .dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #bbb;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-
-        .dot.active {
-            background: #1a4d8c;
-        }
-
-        .contacto {
-            text-align: center;
-        }
-
-        .contacto a {
-            color: #1a4d8c;
-            text-decoration: none;
-            font-weight: bold;
         }
 
         footer {
@@ -315,28 +156,21 @@
             padding: 2rem;
             margin-top: 2rem;
         }
-
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2rem; }
-            .hero { min-height: 350px; }
-            nav a { padding: 0.5rem 0.8rem; }
-            .container { padding: 1rem; }
-        }
     </style>
 </head>
 <body>
 
-<!-- BANNER GRANDE (modelo atlanTTic) -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>APAUVIGO</h1>
-        <p>Asociación de Profesorado Asociado</p>
-        <p>Universidade de Vigo</p>
-        <p class="subtitulo">Polo recoñecemento e a estabilidade do noso colectivo</p>
+<!-- BANNER PRINCIPAL (só un) -->
+<header>
+    <div style="text-align: center; background: rgba(0,0,0,0.6); padding: 2rem 4rem; border-radius: 20px; max-width: 85%;">
+        <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/Logo_PAUVigo.jpg" alt="Logo APAUVIGO" style="max-width: 120px; margin-bottom: 1rem; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));">
+        <h1 style="color: white; font-size: 3rem; margin-bottom: 0.5rem;">APAUVIGO</h1>
+        <p style="color: white; font-size: 1.3rem;">Asociación de Profesorado Asociado da Universidade de Vigo</p>
+        <p style="color: #ffc107; font-size: 1.1rem;">Polo recoñecemento e a estabilidade do noso colectivo</p>
     </div>
-</section>
+</header>
 
-<!-- MENÚ HORIZONTAL -->
+<!-- MENÚ -->
 <nav>
     <a href="#inicio">Inicio</a>
     <a href="#quen-somos">Quen somos</a>
@@ -344,221 +178,90 @@
     <a href="#intranet">Intranet socios</a>
     <a href="#estatutos">Estatutos</a>
     <a href="#novas">Novas</a>
-    <a href="#blog">📝 Blog (en construción)</a>
+    <a href="#blog">📝 Blog</a>
     <a href="#contacto">Contacto</a>
 </nav>
 
 <div class="container">
-    <!-- INICIO (sección clara) -->
     <section class="seccion seccion-clara" id="inicio">
-        <h2> Benvida/o</h2>
-        <p style="text-align: center; font-size: 1.1rem;">A <strong>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</strong> traballa pola estabilización, o recoñecemento e a carreira profesional do profesorado asociado na nosa universidade.</p>
-        <p style="text-align: center; margin-top: 1rem;">🔐 A <strong>intranet de socios</strong> está reservada ás persoas asociadas.</p>
+        <h2>📌 Benvida/o</h2>
+        <p style="text-align: center;">A Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO) traballa pola estabilización, o recoñecemento e a carreira profesional do profesorado asociado.</p>
     </section>
 
-    <!-- QUEN SOMOS (sección gris) -->
     <section class="seccion seccion-gris" id="quen-somos">
-        <h2> Quen somos</h2>
-        <p>A APAUVIGO é unha entidade sen ánimo de lucro, constituída ao abeiro da Lei orgánica 1/2002.</p>
-        <p style="margin-top: 1rem;"><strong>Fins principais:</strong></p>
-        <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+        <h2>🚀 Quen somos</h2>
+        <p>Entidade sen ánimo de lucro, constituída ao abeiro da Lei orgánica 1/2002.</p>
+        <ul style="margin-left: 2rem; margin-top: 1rem;">
             <li>📌 Velar polos intereses das persoas asociadas.</li>
-            <li>📌 Contribuír ao desenvolvemento dun sistema universitario de calidade.</li>
-            <li>📌 Favorecer as relacións entre a universidade e o entorno empresarial.</li>
-            <li>📌 Incrementar a cualificación profesional do profesorado asociado.</li>
-            <li>📌 Fomentar a investigación e a colaboración entre o colectivo.</li>
-            <li>📌 Propoñer medidas para a carreira docente do profesorado asociado.</li>
-            <li>📌 Representar as persoas asociadas ante órganos universitarios e institucións.</li>
+            <li>📌 Contribuír á calidade universitaria.</li>
+            <li>📌 Representar o colectivo ante órganos universitarios.</li>
         </ul>
-        <p style="margin-top: 1rem;"><strong>Domicilio social:</strong> Facultade de Filoloxía e Tradución, Universidade de Vigo.</p>
     </section>
 
-    <!-- FAITE SOCIO (sección clara) -->
     <section class="seccion seccion-clara" id="faite-socio">
-        <h2> Faite socio ou socia da APAUVIGO</h2>
-        <p style="text-align: center;">Se es profesorado asociado da UVigo (ou o fuches con posterioridade ao 2002) e queres formar parte do noso colectivo, podes solicitar a túa adhesión enviando un correo electrónico.</p>
-        <div style="text-align: center; margin-top: 1.5rem;">
-            <a href="mailto:profesoradoasociado@uvigo.gal?subject=Solicitude%20para%20faerse%20socio&body=Ola,%20gustaríame%20recibir%20información%20para%20faerme%20socio%20da%20APAUVIGO.%0A%0A%20Nome%20e%20apelidos:%0A%20Correo%20electrónico:%0A%20Teléfono%20(opcional):%0A%20Departamento:%0A%20Situación%20(activo/a/ex-asociado/a/colaborador/a):%0A%0AGrazas." class="btn-correo">📧 Enviar solicitude por correo</a>
+        <h2>🤝 Faite socio ou socia</h2>
+        <div style="text-align: center;">
+            <a href="mailto:profesoradoasociado@uvigo.gal" class="btn-correo">📧 Enviar solicitude por correo</a>
         </div>
-        <details style="margin-top: 1.5rem;">
-            <summary style="cursor: pointer; color: #1a4d8c; font-weight: bold;">📋 Información que debes incluír no correo</summary>
-            <div style="margin-top: 1rem; padding: 1rem; background: #f4f4f4; border-radius: 10px;">
-                <ul>
-                    <li>Nome e apelidos</li>
-                    <li>Correo electrónico de contacto</li>
-                    <li>Teléfono (opcional)</li>
-                    <li>Departamento</li>
-                    <li>Situación (activo/a / ex-asociado/a / colaborador/a)</li>
-                </ul>
-                <p>Recibirás unha resposta coa confirmación da túa adhesión.</p>
-            </div>
-        </details>
-        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">*A túa solicitude será atendida pola Xunta Directiva da asociación.</p>
     </section>
 
-    <!-- INTRANET (sección gris) -->
     <section class="seccion seccion-gris" id="intranet">
         <h2>🔐 Intranet para socios</h2>
-        <p style="text-align: center;">Esta sección contén as <strong>propostas normativas</strong> da asociación. A descarga dos PDF está protexida para uso exclusivo das persoas asociadas.</p>
         <div class="propostas">
             <div class="tarxeta">
                 <h3>📑 Estabilización LOU → LOSU</h3>
-                <p>Proposta de normativa para a estabilización do profesorado asociado mediante concurso de méritos con valoración preferente da experiencia docente.</p>
-                <div id="descarga1-protexida">
-                    <a href="#" class="btn-descarga" id="descarga1" style="pointer-events: none; opacity: 0.5;">🔒 Descargar PDF (socios)</a>
-                </div>
+                <a href="#" class="btn-descarga" id="descarga1">🔒 Descargar PDF</a>
             </div>
             <div class="tarxeta">
                 <h3>👨‍🏫 Promoción interna a PPL</h3>
-                <p>Procedemento para a promoción de profesorado asociado doutor a profesorado permanente laboral.</p>
-                <div id="descarga2-protexida">
-                    <a href="#" class="btn-descarga" id="descarga2" style="pointer-events: none; opacity: 0.5;">🔒 Descargar PDF (socios)</a>
-                </div>
+                <a href="#" class="btn-descarga" id="descarga2">🔒 Descargar PDF</a>
             </div>
         </div>
         <div class="proteccion" id="zona-contrasinal">
-            <p><strong>🔐 Zona privada para persoas socias</strong></p>
-            <p>Introduce o contrasinal para acceder ás descargas:</p>
+            <p><strong>🔐 Zona privada</strong></p>
             <input type="password" id="contrasinal" placeholder="Contrasinal">
             <button onclick="comprobarContrasinal()">Acceder</button>
-            <div id="erro-contrasinal" class="contrasinal-error"></div>
-            <p style="font-size: 0.8rem; margin-top: 0.5rem;">*Se non tes o contrasinal, solicítao en <a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
+            <div id="erro-contrasinal"></div>
         </div>
     </section>
 
-    <!-- ESTATUTOS (sección clara) -->
     <section class="seccion seccion-clara" id="estatutos">
-        <h2> Estatutos da APAUVIGO</h2>
-        <div class="estatutos-resumo">
-            <h3>Capítulo I - Da asociación en xeral</h3>
-            <p><strong>Artigo 1º.</strong> Constitúese unha asociación sen ánimo de lucro coa denominación "Asociación de Profesorado Asociado da Universidade de Vigo".</p>
-            <p><strong>Artigo 5º.</strong> Fins principais: velar polos intereses das persoas asociadas, contribuír á calidade universitaria, fomentar a investigación, propor medidas para a carreira docente, e representar o colectivo.</p>
-            <h3>Capítulo II - Dos asociados</h3>
-            <p><strong>Artigo 6º.</strong> Poden ser integrantes: profesorado asociado en activo na UVigo, quen o exerceu con posterioridade ao 1 de xaneiro de 2002, e persoas que contribúan aos fins da asociación.</p>
-            <h3>Capítulo III - Órganos de goberno</h3>
-            <p><strong>Artigos 12º-15º.</strong> Presidencia (1 ano), Xunta Directiva (presidente/a, vicepresidente/a, secretario/a, tesoureiro/a, 3 vocais), Asemblea Xeral.</p>
-        </div>
+        <h2>📜 Estatutos</h2>
+        <p>Resumo dos estatutos da asociación.</p>
     </section>
 
-    <!-- NOVAS (sección gris) -->
     <section class="seccion seccion-gris" id="novas">
-        <h2> Novas e actualizacións</h2>
-        <div class="carousel-container">
-            <div class="carousel-slides" id="carouselSlides">
-                <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/800x400/1a4d8c/ffffff?text=Reunión+con+candidaturas" alt="Reunión con candidaturas">
-                    <div class="carousel-caption">Reunión con candidaturas - 16 abril 2026</div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/800x400/2c3e50/ffffff?text=Asemblea+da+asociación" alt="Asemblea da asociación">
-                    <div class="carousel-caption">Asemblea da asociación - Próximamente</div>
-                </div>
-                <div class="carousel-slide">
-                    <img src="https://via.placeholder.com/800x400/ffc107/1a252f?text=Xuntanza+con+reitoría" alt="Xuntanza con reitoría">
-                    <div class="carousel-caption">Xuntanza con reitoría - Próximamente</div>
-                </div>
-            </div>
-            <button class="prev" onclick="moveSlide(-1)">❮</button>
-            <button class="next" onclick="moveSlide(1)">❯</button>
-        </div>
-        <div class="indicators" id="indicators"></div>
-        
-        <div class="twitter-container">
-            <h3>🐦 Asociación Estatal de Profesorado Asociado (AEPA)</h3>
-            <p>Síguenos en Twitter para estar ao día das novidades do colectivo a nivel estatal:</p>
-            <a href="https://twitter.com/estatalsocia2" target="_blank" class="btn-twitter">➡️ Visitar @estatalsocia2 en Twitter</a>
-        </div>
+        <h2>📰 Novas</h2>
+        <p>Próximamente...</p>
     </section>
 
-    <!-- BLOG (sección clara) -->
     <section class="seccion seccion-clara" id="blog">
-        <h2>📝 Blog da asociación</h2>
-        <p style="text-align: center;">Esta sección está en construción. Pronto publicaremos contidos de interese para o profesorado asociado.</p>
-        <div style="text-align: center; margin-top: 1rem;">
-            <span style="background: #f4f4f4; padding: 0.5rem 1rem; border-radius: 20px;">🚧 En construción - Próximamente 🚧</span>
-        </div>
+        <h2>📝 Blog</h2>
+        <p>En construción 🚧</p>
     </section>
 
-    <!-- CONTACTO (sección gris) -->
     <section class="seccion seccion-gris contacto" id="contacto">
         <h2>📧 Contacto</h2>
-        <p>Escríbenos para calquera dúbida ou suxestión:</p>
         <p><a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
-        <p>📍 Domicilio social: Facultade de Filoloxía e Tradución, UVigo</p>
-        <p>🔑 <strong>Solicita o contrasinal da intranet</strong> escribíndonos ao correo.</p>
     </section>
 </div>
 
 <footer>
-    <p>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</p>
-    <p>Pontevedra, 2026</p>
-    <p style="font-size: 0.8rem;">Algunhas imaxes de <a href="https://www.freepik.com" target="_blank">Freepik</a> e <a href="https://pixabay.com" target="_blank">Pixabay</a></p>
+    <p>APAUVIGO - Pontevedra, 2026</p>
 </footer>
 
 <script>
     const CONTRASINAL_CORRECTO = "asociados2026";
-    const URL_PDF1 = "#";
-    const URL_PDF2 = "#";
-    
     function comprobarContrasinal() {
-        const contrasinalIntroducido = document.getElementById('contrasinal').value;
-        const erroDiv = document.getElementById('erro-contrasinal');
-        if (contrasinalIntroducido === CONTRASINAL_CORRECTO) {
-            const btn1 = document.getElementById('descarga1');
-            const btn2 = document.getElementById('descarga2');
-            btn1.href = URL_PDF1;
-            btn2.href = URL_PDF2;
-            btn1.style.pointerEvents = "auto";
-            btn1.style.opacity = "1";
-            btn2.style.pointerEvents = "auto";
-            btn2.style.opacity = "1";
-            btn1.innerHTML = "📎 Descargar PDF";
-            btn2.innerHTML = "📎 Descargar PDF";
+        let input = document.getElementById('contrasinal').value;
+        if (input === CONTRASINAL_CORRECTO) {
+            document.getElementById('descarga1').href = "#";
+            document.getElementById('descarga2').href = "#";
             document.getElementById('zona-contrasinal').style.display = "none";
-            erroDiv.style.color = "green";
-            erroDiv.innerHTML = "✅ Acceso concedido. Xa podes descargar os PDF.";
         } else {
-            erroDiv.innerHTML = "❌ Contrasinal incorrecto. Se non o tes, solicítao no correo da asociación.";
+            document.getElementById('erro-contrasinal').innerHTML = "❌ Contrasinal incorrecto";
         }
     }
-    
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const totalSlides = slides.length;
-    function updateCarousel() {
-        document.getElementById('carouselSlides').style.transform = `translateX(-${currentSlide * 100}%)`;
-        const dots = document.querySelectorAll('.dot');
-        dots.forEach((dot, index) => dot.classList.toggle('active', index === currentSlide));
-    }
-    function moveSlide(direction) {
-        currentSlide += direction;
-        if (currentSlide >= totalSlides) currentSlide = 0;
-        if (currentSlide < 0) currentSlide = totalSlides - 1;
-        updateCarousel();
-    }
-    function goToSlide(index) {
-        currentSlide = index;
-        updateCarousel();
-    }
-    function createIndicators() {
-        const indicatorsDiv = document.getElementById('indicators');
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('span');
-            dot.className = 'dot';
-            dot.onclick = () => goToSlide(i);
-            indicatorsDiv.appendChild(dot);
-        }
-        updateCarousel();
-    }
-    let autoSlide = setInterval(() => moveSlide(1), 5000);
-    const carouselContainer = document.querySelector('.carousel-container');
-    if (carouselContainer) {
-        carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
-        carouselContainer.addEventListener('mouseleave', () => {
-            autoSlide = setInterval(() => moveSlide(1), 5000);
-        });
-    }
-    createIndicators();
 </script>
 
 </body>
