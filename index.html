@@ -19,7 +19,11 @@
             font-weight: 400;
             line-height: 1.6;
             color: #333;
-            background-color: #f0f2f5;
+            background-image: url('https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/fondo_web2.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         /* BANNER PRINCIPAL */
@@ -94,7 +98,6 @@
             transform: translateY(-2px);
         }
 
-        /* CONTIDO */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -105,14 +108,8 @@
             padding: 3rem 2rem;
             margin-bottom: 1.5rem;
             border-radius: 15px;
-        }
-
-        .seccion-clara {
-            background: white;
-        }
-
-        .seccion-gris {
-            background: #f5f7fa;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .seccion h2 {
@@ -172,11 +169,6 @@
             text-decoration: none;
             display: inline-block;
             font-weight: 500;
-            transition: background 0.3s ease;
-        }
-
-        .btn-correo:hover {
-            background: #2c3e50;
         }
 
         .btn-twitter {
@@ -214,6 +206,7 @@
             cursor: pointer;
         }
 
+        /* CALENDARIO */
         .calendario ul {
             list-style: none;
             padding-left: 0;
@@ -225,6 +218,111 @@
             padding: 1rem;
             border-radius: 12px;
             border-left: 4px solid #ffc107;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* CAROUSEL */
+        .carousel-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        button.prev, button.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+        }
+
+        button.prev { left: 10px; }
+        button.next { right: 10px; }
+
+        .indicators {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #bbb;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background: #1a4d8c;
+        }
+
+        /* GALERÍA DE FOTOS (grid) */
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .foto {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .foto img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .foto p {
+            padding: 0.8rem;
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
         .estatutos-resumo {
@@ -258,6 +356,7 @@
             .banner-contenido h1 { font-size: 2rem; }
             nav a { padding: 0.5rem 0.8rem; }
             .container { padding: 1rem; }
+            .carousel-slide img { height: 250px; }
         }
     </style>
 </head>
@@ -284,13 +383,16 @@
     <a href="#blog">📝 Blog (en construción)</a>
     <a href="#contacto">Contacto</a>
 </nav>
+
 <div class="container">
-    <section class="seccion seccion-clara" id="inicio">
+    <!-- INICIO -->
+    <section class="seccion" id="inicio">
         <h2>📌 Benvida/o</h2>
         <p style="text-align: center;">A <strong>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</strong> traballa pola estabilización, o recoñecemento e a carreira profesional do profesorado asociado na nosa universidade.</p>
     </section>
 
-    <section class="seccion seccion-gris" id="quen-somos">
+    <!-- QUEN SOMOS -->
+    <section class="seccion" id="quen-somos">
         <h2>🚀 Quen somos</h2>
         <p>A APAUVIGO é unha entidade sen ánimo de lucro, constituída ao abeiro da Lei orgánica 1/2002.</p>
         <ul style="margin-left: 2rem; margin-top: 1rem;">
@@ -305,24 +407,44 @@
         <p style="margin-top: 1rem;"><strong>Domicilio social:</strong> Facultade de Filoloxía e Tradución, Universidade de Vigo.</p>
     </section>
 
-    <section class="seccion seccion-clara" id="faite-socio">
+    <!-- FAITE SOCIO -->
+    <section class="seccion" id="faite-socio">
         <h2>🤝 Faite socio ou socia da APAUVIGO</h2>
-        <p style="text-align: center;">Envía un correo electrónico coa túa solicitude.</p>
+        <p style="text-align: center;">Se es profesorado asociado da UVigo (ou o fuches con posterioridade ao 2002) e queres formar parte do noso colectivo, envía un correo electrónico coa túa solicitude.</p>
         <div style="text-align: center; margin-top: 1.5rem;">
             <a href="mailto:profesoradoasociado@uvigo.gal" class="btn-correo">📧 Enviar solicitude por correo</a>
         </div>
+        <details style="margin-top: 1.5rem;">
+            <summary style="cursor: pointer; color: #1a4d8c; font-weight: bold;">📋 Información que debes incluír</summary>
+            <div style="margin-top: 1rem; padding: 1rem; background: #f4f4f4; border-radius: 10px;">
+                <ul>
+                    <li>Nome e apelidos</li>
+                    <li>Correo electrónico de contacto</li>
+                    <li>Teléfono (opcional)</li>
+                    <li>Departamento</li>
+                    <li>Situación (activo/a / ex-asociado/a / colaborador/a)</li>
+                </ul>
+            </div>
+        </details>
     </section>
 
-    <section class="seccion seccion-gris" id="intranet">
+    <!-- INTRANET -->
+    <section class="seccion" id="intranet">
         <h2>🔐 Intranet para socios</h2>
         <div class="propostas">
             <div class="tarxeta">
                 <h3>📑 Estabilización LOU → LOSU</h3>
-                <a href="#" class="btn-descarga" id="descarga1">🔒 Descargar PDF (socios)</a>
+                <p>Proposta de normativa para a estabilización do profesorado asociado mediante concurso de méritos con valoración preferente da experiencia docente.</p>
+                <div id="descarga1-protexida">
+                    <a href="#" class="btn-descarga" id="descarga1" style="pointer-events: none; opacity: 0.5;">🔒 Descargar PDF (socios)</a>
+                </div>
             </div>
             <div class="tarxeta">
                 <h3>👨‍🏫 Promoción interna a PPL</h3>
-                <a href="#" class="btn-descarga" id="descarga2">🔒 Descargar PDF (socios)</a>
+                <p>Procedemento para a promoción de profesorado asociado doutor a profesorado permanente laboral.</p>
+                <div id="descarga2-protexida">
+                    <a href="#" class="btn-descarga" id="descarga2" style="pointer-events: none; opacity: 0.5;">🔒 Descargar PDF (socios)</a>
+                </div>
             </div>
         </div>
         <div class="proteccion" id="zona-contrasinal">
@@ -333,34 +455,81 @@
         </div>
     </section>
 
-    <section class="seccion seccion-clara" id="estatutos">
+    <!-- ESTATUTOS -->
+    <section class="seccion" id="estatutos">
         <h2>📜 Estatutos da APAUVIGO</h2>
         <div class="estatutos-resumo">
-            <h3>Capítulo I</h3>
-            <p>Constitúese unha asociación sen ánimo de lucro coa denominación "Asociación de Profesorado Asociado da Universidade de Vigo".</p>
+            <h3>Capítulo I - Da asociación en xeral</h3>
+            <p><strong>Artigo 1º.</strong> Constitúese unha asociación sen ánimo de lucro coa denominación "Asociación de Profesorado Asociado da Universidade de Vigo".</p>
+            <p><strong>Artigo 5º.</strong> Fins principais: velar polos intereses das persoas associadas, contribuír á calidade universitaria, fomentar a investigación, propor medidas para a carreira docente, e representar o colectivo.</p>
+            <h3>Capítulo II - Dos asociados</h3>
+            <p><strong>Artigo 6º.</strong> Poden ser integrantes: profesorado asociado en activo na UVigo, quen o exerceu con posterioridade ao 1 de xaneiro de 2002, e persoas que contribúan aos fins da asociación.</p>
+            <h3>Capítulo III - Órganos de goberno</h3>
+            <p><strong>Artigos 12º-15º.</strong> Presidencia (1 ano), Xunta Directiva, Asemblea Xeral.</p>
         </div>
     </section>
 
-    <section class="seccion seccion-gris" id="novas">
-        <h2>📰 Novas</h2>
-        <div class="twitter-container">
-            <a href="https://twitter.com/estatalsocia2" target="_blank" class="btn-twitter">➡️ Visitar @estatalsocia2</a>
+    <!-- NOVAS: CAROUSEL + TWITTER + CALENDARIO -->
+    <section class="seccion" id="novas">
+        <h2>📰 Novas e actualizacións</h2>
+        
+        <!-- CAROUSEL -->
+        <div class="carousel-container">
+            <div class="carousel-slides" id="carouselSlides">
+                <div class="carousel-slide">
+                    <img src="https://via.placeholder.com/800x400/1a4d8c/ffffff?text=Reunión+con+candidaturas" alt="Reunión con candidaturas">
+                    <div class="carousel-caption">Reunión con candidaturas - 16 abril 2026</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://via.placeholder.com/800x400/2c3e50/ffffff?text=Asemblea+da+asociación" alt="Asemblea da asociación">
+                    <div class="carousel-caption">Asemblea da asociación - Próximamente</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://via.placeholder.com/800x400/ffc107/1a252f?text=Xuntanza+con+reitoría" alt="Xuntanza con reitoría">
+                    <div class="carousel-caption">Xuntanza con reitoría - Próximamente</div>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">❮</button>
+            <button class="next" onclick="moveSlide(1)">❯</button>
+        </div>
+        <div class="indicators" id="indicators"></div>
+        
+        <!-- TWITTER -->
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="https://twitter.com/estatalsocia2" target="_blank" class="btn-twitter">➡️ Visitar @estatalsocia2 en Twitter</a>
+        </div>
+        
+        <!-- CALENDARIO -->
+        <h3 style="color: #1a4d8c; margin: 1.5rem 0 1rem 0;">📅 Calendario de accións</h3>
+        <div class="calendario">
+            <ul>
+                <li><strong>16 de abril de 2026</strong> - Debate con candidaturas</li>
+                <li><strong>6 de maio de 2026</strong> - Votacións reitoría</li>
+                <li><strong>1º trimestre 2026-2027</strong> - Negociación das normativas</li>
+            </ul>
         </div>
     </section>
 
-    <section class="seccion seccion-clara" id="blog">
-        <h2>📝 Blog</h2>
-        <p style="text-align: center;">En construción 🚧</p>
+    <!-- BLOG -->
+    <section class="seccion" id="blog">
+        <h2>📝 Blog da asociación</h2>
+        <p style="text-align: center;">Esta sección está en construción. Pronto publicaremos contidos de interese para o profesorado asociado.</p>
+        <div style="text-align: center; margin-top: 1rem;">
+            <span style="background: #f4f4f4; padding: 0.5rem 1rem; border-radius: 20px;">🚧 En construción - Próximamente 🚧</span>
+        </div>
     </section>
 
-    <section class="seccion seccion-gris contacto" id="contacto">
+    <!-- CONTACTO -->
+    <section class="seccion contacto" id="contacto">
         <h2>📧 Contacto</h2>
         <p><a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
+        <p>📍 Domicilio social: Facultade de Filoloxía e Tradución, UVigo</p>
     </section>
 </div>
 
 <footer>
-    <p>APAUVIGO - Pontevedra, 2026</p>
+    <p>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</p>
+    <p>Pontevedra, 2026</p>
 </footer>
 
 <script>
@@ -370,11 +539,56 @@
         if (input === CONTRASINAL_CORRECTO) {
             document.getElementById('descarga1').href = "#";
             document.getElementById('descarga2').href = "#";
+            document.getElementById('descarga1').style.pointerEvents = "auto";
+            document.getElementById('descarga2').style.pointerEvents = "auto";
+            document.getElementById('descarga1').style.opacity = "1";
+            document.getElementById('descarga2').style.opacity = "1";
+            document.getElementById('descarga1').innerHTML = "📎 Descargar PDF";
+            document.getElementById('descarga2').innerHTML = "📎 Descargar PDF";
             document.getElementById('zona-contrasinal').style.display = "none";
         } else {
             document.getElementById('erro-contrasinal').innerHTML = "❌ Contrasinal incorrecto";
         }
     }
+    
+    // CAROUSEL
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+    function updateCarousel() {
+        document.getElementById('carouselSlides').style.transform = `translateX(-${currentSlide * 100}%)`;
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach((dot, index) => dot.classList.toggle('active', index === currentSlide));
+    }
+    function moveSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide >= totalSlides) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = totalSlides - 1;
+        updateCarousel();
+    }
+    function goToSlide(index) {
+        currentSlide = index;
+        updateCarousel();
+    }
+    function createIndicators() {
+        const indicatorsDiv = document.getElementById('indicators');
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'dot';
+            dot.onclick = () => goToSlide(i);
+            indicatorsDiv.appendChild(dot);
+        }
+        updateCarousel();
+    }
+    let autoSlide = setInterval(() => moveSlide(1), 5000);
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(() => moveSlide(1), 5000);
+        });
+    }
+    createIndicators();
 </script>
 
 </body>
