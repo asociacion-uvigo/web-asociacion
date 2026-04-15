@@ -399,7 +399,9 @@
     background-repeat: no-repeat;
 }>
 
-<header style="background-image: url('https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/9beaedab4427d90b7d4a7bb789a53870503d74bf/imaxes/baner_fondo.jpg'); background-size: cover; background-position: center; min-height: 280px; ...">
+<header style="background-image: url('https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/9beaedab4427d90b7d4a7bb789a53870503d74bf/imaxes/baner_fondo.jpg'); background-size: cover; background-position: bottom; min-height: 280px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div style="text-align: center; background: rgba(0,0,0,0.4); padding: 1.5rem 2rem; border-radius: 20px;">
+        <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/39b29dfc52f262da985903b5585406d5d92ed6c0/Logo_PAUVigo.jpg" alt="Logo APAUVIGO" style="max-width: 100px; margin-bottom: 1rem; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));">
         <h1 style="color: white; font-size: 2.5rem; margin-bottom: 0.5rem;">APAUVIGO</h1>
         <p style="color: white; font-size: 1.2rem;">Asociación de Profesorado Asociado da Universidade de Vigo</p>
         <p style="color: #ffc107; font-size: 1rem;">Polo recoñecemento e a estabilidade do noso colectivo</p>
@@ -439,7 +441,33 @@
         </ul>
         <p><strong>Domicilio social:</strong> Facultade de Filoloxía e Tradución, Universidade de Vigo.</p>
     </div>
+    <!-- 🤝 FAITE SOCIO (ENGADIR AQUÍ) -->
+    <div class="seccion" id="faite-socio">
+        <h2>🤝 Faite socio ou socia da APAUVIGO</h2>
+        <p>Se es profesorado asociado da UVigo (ou o fuches con posterioridade ao 2002) e queres formar parte do noso colectivo, podes solicitar a túa adhesión a través do seguinte formulario.</p>   
+        <!-- Opción alternativa por correo -->
+        <details style="margin-top: 1.5rem;">
+            <summary style="cursor: pointer; color: #1a4d8c; font-weight: bold;">📧 Tamén podes enviar un correo electrónico</summary>
+            <div style="margin-top: 1rem; padding: 1rem; background: #f4f4f4; border-radius: 10px;">
+                <p>Escribe a <a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a> indicando:</p>
+                <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                    <li>Nome e apelidos</li>
+                    <li>Correo electrónico de contacto</li>
+                    <li>Teléfono (opcional)</li>
+                    <li>Departamento</li>
+                    <li>Situación (activo/a / ex-asociado/a / colaborador/a)</li>
+                </ul>
+                <p>Recibirás unha resposta coa confirmación da túa adhesión.</p>
+            </div>
+        </details>
+        
+        <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">*A túa solicitude será atendida pola Xunta Directiva da asociación.</p>
+    </div>
 
+    <!-- INTRANET PARA SOCIOS -->
+    <div class="seccion intranet" id="intranet">
+        ...
+    </div>
     <!-- INTRANET SOCIOS -->
     <div class="seccion intranet" id="intranet">
         <h2>🔐 Intranet para socios</h2>
