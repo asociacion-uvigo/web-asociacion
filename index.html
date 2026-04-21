@@ -47,7 +47,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 500px;
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .banner-contenido {
@@ -73,30 +73,40 @@
     max-width: 90%;
 }
 
-.banner-contenido img {
-    max-width: 120px;
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo-banner {
+    max-width: 100px;
     filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
 }
 
 .banner-contenido h1 {
     color: white;
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-size: 6rem;
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
-.banner-contenido p {
+.banner-contenido .subtitulo-grande {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
 }
 
-.banner-contenido .subtitulo {
+.banner-contenido .subtitulo-amarelo {
     color: #ffc107;
-    font-size: 1rem;
-    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 300;
 }
-
         nav {
             background: #3a4a5a;
             display: flex;
@@ -404,13 +414,12 @@
 
 <div class="banner">
     <div class="banner-contenido">
-        <!-- Franxa para o logo (fondo branco semitransparente) -->
-        <div class="logo-franxa">
-            <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/Logo_PAUVigo.jpg" alt="Logo APAUVIGO">
+        <div class="logo-titulo">
+            <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/Logo_PAUVigo.jpg" alt="Logo APAUVIGO" class="logo-banner">
+            <h1>APAUVIGO</h1>
         </div>
-        <h1>APAUVIGO</h1>
         <p class="subtitulo-grande">Asociación de Profesorado Asociado da Universidade de Vigo</p>
-        <p class="subtitulo-pequeno">Polo recoñecemento e a estabilidade do noso colectivo</p>
+        <p class="subtitulo-amarelo">Polo recoñecemento e a estabilidade do noso colectivo</p>
     </div>
 </div>
 
