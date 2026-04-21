@@ -5,17 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APAUVIGO - Asociación de Profesorado Asociado da UVigo</title>
     <style>
-        /* FONTE ROBOTO LIGHT (oficial da UVigo) */
+        /* CARGA SÓ OS PESOS QUE NECESITAS: Light (300) e Medium (500) */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Roboto', Arial, sans-serif !important;
+        /* FORZAR ROBOTO LIGHT EN TODO O TEXTO */
+        body, p, li, a, .seccion-blanca, .seccion-gris, .calendario li, .foto p, .estatutos-resumo p {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: 300;
+        }
+
+        /* TÍTULOS E BOTÓNS (manteñen peso medio para non ser demasiado finos) */
+        h1, h2, h3, nav a, .btn-descarga, .btn-correo, .btn-x, .proteccion p, .proteccion button, summary {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-weight: 500;
+        }
+
+        /* MENÚ: forzar Roboto Light nas ligazóns */
+        nav a {
             font-weight: 300 !important;
+        }
+
+        body {
             line-height: 1.6;
             color: #333;
             background-image: url('https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/fondo_web2.jpg');
@@ -25,61 +41,61 @@
             background-repeat: no-repeat;
         }
 
-        /* BANNER SEN CAIXA INTERIOR, ANCHO COMPLETO */
-        .banner {
-            background-image: url('https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/baner_fondo.jpg');
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            min-height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-        }
+        /* BANNER SEN CAIXA INTERIOR */
+.banner {
+    background-image: url('https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/baner_fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
 
-        .banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.55);
-        }
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
 
-        .banner-contenido {
-            position: relative;
-            z-index: 1;
-            color: white;
-            padding: 2rem;
-            max-width: 90%;
-        }
+.banner-contenido {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 2rem;
+    max-width: 90%;
+}
 
-        .banner-contenido img {
-            max-width: 120px;
-            margin-bottom: 1rem;
-            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
-        }
+.banner-contenido img {
+    max-width: 120px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+}
 
-        .banner-contenido h1 {
-            color: white;
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
+.banner-contenido h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
 
-        .banner-contenido p {
-            color: white;
-            font-size: 1.2rem;
-        }
+.banner-contenido p {
+    color: white;
+    font-size: 1.2rem;
+}
 
-        .banner-contenido .subtitulo {
-            color: #ffc107;
-            font-size: 1rem;
-            margin-top: 0.5rem;
-        }
+.banner-contenido .subtitulo {
+    color: #ffc107;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
 
         nav {
             background: #3a4a5a;
@@ -99,7 +115,6 @@
             padding: 0.5rem 1.2rem;
             border-radius: 25px;
             transition: all 0.3s ease;
-            font-weight: 500;
         }
 
         nav a:hover {
@@ -181,7 +196,6 @@
             text-decoration: none;
             display: inline-block;
             margin-top: 1rem;
-            font-weight: 500;
             transition: transform 0.2s ease;
         }
 
@@ -196,7 +210,6 @@
             border-radius: 40px;
             text-decoration: none;
             display: inline-block;
-            font-weight: 500;
         }
 
         .btn-x {
@@ -206,7 +219,6 @@
             border-radius: 40px;
             text-decoration: none;
             display: inline-block;
-            font-weight: 500;
         }
 
         .proteccion {
@@ -352,7 +364,6 @@
         .foto p {
             padding: 0.8rem;
             font-size: 0.9rem;
-            font-weight: 500;
         }
 
         .estatutos-resumo {
@@ -394,10 +405,13 @@
 
 <div class="banner">
     <div class="banner-contenido">
-        <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/Logo_PAUVigo.jpg" alt="Logo APAUVIGO">
+        <!-- Franxa para o logo (fondo branco semitransparente) -->
+        <div class="logo-franxa">
+            <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/Logo_PAUVigo.jpg" alt="Logo APAUVIGO">
+        </div>
         <h1>APAUVIGO</h1>
-        <p>Asociación de Profesorado Asociado da Universidade de Vigo</p>
-        <p class="subtitulo">Polo recoñecemento e a estabilidade do noso colectivo</p>
+        <p class="subtitulo-grande">Asociación de Profesorado Asociado da Universidade de Vigo</p>
+        <p class="subtitulo-pequeno">Polo recoñecemento e a estabilidade do noso colectivo</p>
     </div>
 </div>
 
@@ -441,7 +455,7 @@
             <li>Velar polos intereses das persoas asociadas.</li>
             <li>Contribuír ao desenvolvemento dun sistema universitario de calidade.</li>
             <li>Favorecer as relacións entre a universidade e o entorno empresarial.</li>
-            <li>Incrementar a cualificación profesional do profesorado asociado.</li>
+            <li>Incrementar a cualificación profesional do profesorado associado.</li>
             <li>Fomentar a investigación e a colaboración entre o colectivo.</li>
             <li>Propoñer medidas para a carreira docente do profesorado asociado.</li>
             <li>Representar as persoas asociadas ante órganos universitarios e institucións.</li>
