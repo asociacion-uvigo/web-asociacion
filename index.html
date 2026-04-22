@@ -637,27 +637,40 @@
             <p><strong>Normativa elaboración do POD (curso 2026-2027)</strong></p>
             <p style="font-size: 0.8rem;">Planificación docente</p>
             <a href="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/normativa_pod_26_27.pdf" target="_blank" class="btn-descarga" style="display: inline-block; margin-top: 0.5rem;">📄 Descargar PDF</a>
-    <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 0.5rem; margin-top: 0.5rem; font-size: 0.75rem; border-radius: 5px;">
-        <strong>⚠️ Corrección de erros:</strong> Publicada unha fe de erros posterior.
-        <a href="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/correcion_erros_pod.pdf" target="_blank" style="color: #1a4d8c; font-weight: bold;">Descargar corrección</a>
-</div> <!-- pecha contacto -->
+            <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 0.5rem; margin-top: 0.5rem; font-size: 0.75rem; border-radius: 5px;">
+                <strong>⚠️ Corrección de erros:</strong> Publicada unha fe de erros posterior.
+                <a href="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/correcion_erros_pod.pdf" target="_blank" style="color: #1a4d8c; font-weight: bold;">Descargar corrección</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACTO - GRIS -->
+<div class="seccion-gris contacto" id="contacto">
+    <h2>Contacto</h2>
+    <p><a href="mailto:profesoradoasociado@uvigo.gal">profesoradoasociado@uvigo.gal</a></p>
+    <p>Domicilio social: Facultade de Filoloxía e Tradución, UVigo</p>
+</div>
+
 </div> <!-- pecha container -->
+
 <footer>
     <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/a13f68e725ead57c739d0f348dcc84e5edb6e9ed/imaxes/Logotipo_UNIVERSIDADE_VIGO_BRANCO-01.png" alt="Logo Universidade de Vigo" style="max-width: 200px; margin-bottom: 1rem;">
     <p>Asociación de Profesorado Asociado da Universidade de Vigo (APAUVIGO)</p>
     <p>Pontevedra, 2026</p>
 </footer>
+
 <script>
     const CONTRASINAL_CORRECTO = "asociad@s2026";
 
-function comprobarContrasinal() {
-    let input = document.getElementById('contrasinal').value;
-    if (input === CONTRASINAL_CORRECTO) {
-        window.location.href = "https://asociacion-uvigo.github.io/intranet-asociacion/";
-    } else {
-        document.getElementById('erro-contrasinal').innerHTML = "Contrasinal incorrecto";
+    function comprobarContrasinal() {
+        let input = document.getElementById('contrasinal').value;
+        if (input === CONTRASINAL_CORRECTO) {
+            window.location.href = "https://asociacion-uvigo.github.io/intranet-asociacion/";
+        } else {
+            document.getElementById('erro-contrasinal').innerHTML = "Contrasinal incorrecto";
+        }
     }
-}
     
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-slide');
@@ -697,6 +710,6 @@ function comprobarContrasinal() {
     }
     createIndicators();
 </script>
-</footer>
+
 </body>
 </html>
