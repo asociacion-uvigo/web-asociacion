@@ -648,23 +648,16 @@
     <p>Pontevedra, 2026</p>
 </footer>
 <script>
-    const CONTRASINAL_CORRECTO = "asociados2026";
-    function comprobarContrasinal() {
-        let input = document.getElementById('contrasinal').value;
-        if (input === CONTRASINAL_CORRECTO) {
-            document.getElementById('descarga1').href = "#";
-            document.getElementById('descarga2').href = "#";
-            document.getElementById('descarga1').style.pointerEvents = "auto";
-            document.getElementById('descarga2').style.pointerEvents = "auto";
-            document.getElementById('descarga1').style.opacity = "1";
-            document.getElementById('descarga2').style.opacity = "1";
-            document.getElementById('descarga1').innerHTML = "Descargar PDF";
-            document.getElementById('descarga2').innerHTML = "Descargar PDF";
-            document.getElementById('zona-contrasinal').style.display = "none";
-        } else {
-            document.getElementById('erro-contrasinal').innerHTML = "Contrasinal incorrecto";
-        }
+    const CONTRASINAL_CORRECTO = "asociad@s2026";
+
+function comprobarContrasinal() {
+    let input = document.getElementById('contrasinal').value;
+    if (input === CONTRASINAL_CORRECTO) {
+        window.location.href = "https://asociacion-uvigo.github.io/intranet-asociacion/";
+    } else {
+        document.getElementById('erro-contrasinal').innerHTML = "Contrasinal incorrecto";
     }
+}
     
     let currentSlide = 0;
     const slides = document.querySelectorAll('.carousel-slide');
