@@ -412,17 +412,21 @@
         #estatutos {
     margin-top: 1.5rem;
 }
- /* FOOTER ANCHO COMPLETO */
-        footer {
-            width: 100%;
-            max-width: 100%;
-            margin: 0;
-            padding: 1rem 2rem;
-            background: #3a4a5a;
-            color: white;
-            text-align: center;
-            box-sizing: border-box;
-        }
+ /* FOOTER FORZADO A ANCHO COMPLETO */
+footer {
+    width: 100vw !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 1rem 2rem !important;
+    background: #3a4a5a !important;
+    color: white !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
 }
     </style>
 </head>
