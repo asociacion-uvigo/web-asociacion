@@ -412,21 +412,75 @@
         #estatutos {
     margin-top: 1.5rem;
 }   
-            /* Estilo para os botóns do carousel de documentos */
-.prev-docs, .next-docs {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+/* TARXETAS DE DOCUMENTOS DE INTERESE */
+.documentos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.tarxeta-doc {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tarxeta-doc:hover {
+    transform: translateY(-5px);
+}
+
+.tarxeta-doc img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.tarxeta-doc .contenido {
+    padding: 0.8rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarxeta-doc p {
+    margin: 0.2rem 0;
+}
+
+.tarxeta-doc .titulo {
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+.tarxeta-doc .descricion {
+    font-size: 0.7rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.tarxeta-doc .btn-descarga {
+    margin-top: auto;
+    background: #1a4d8c;
     color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-    z-index: 10;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.tarxeta-doc .btn-descarga:hover {
+    background: #2c3e50;
 }
 
 .prev-docs:hover, .next-docs:hover {
@@ -642,44 +696,52 @@ footer p {
             <span style="background: #f4f4f4; padding: 0.5rem 1rem; border-radius: 20px;">En construción - Próximamente</span>
         </div>
     </div>
-<!-- DOCUMENTOS DE INTERESE - MOSAICO -->
+<!-- DOCUMENTOS DE INTERESE - MOSAICO PEQUENO -->
 <div class="seccion-blanca" id="documentos">
     <h2>Documentos de interese</h2>
-    <div class="galeria">
+    <div class="documentos-grid">
         
         <!-- Tarxeta 1: LOSU -->
-        <div class="foto">
-            <img src="https://raw.github.com/asociacion-uvigo/web-asociacion/blob/245df2adcb8acb9c8c86f451c3452c837ae45910/imaxes-galeria/losu.png" alt="Lei LOSU" style="width: 100%; height: 160px; object-fit: cover; object-position: top;">
-            <p><strong>Lei Orgánica 2/2023 (LOSU)</strong></p>
-            <p style="font-size: 0.8rem;">Lei do Sistema Universitario</p>
-            <a href="https://raw.github.com/asociacion-uvigo/web-asociacion/blob/397ce29e735d7ffa3c890479997e67013ef51449/imaxes/losu_consolidado.pdf" class="btn-descarga" style="display: inline-block; margin-top: 0.5rem;">📄 Descargar PDF</a>
+        <div class="tarxeta-doc">
+            <img src="URL_RAW_IMAXE_LOSU" alt="Lei LOSU">
+            <div class="contenido">
+                <p class="titulo">📘 Lei Orgánica 2/2023 (LOSU)</p>
+                <p class="descricion">Lei do Sistema Universitario</p>
+                <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2023-7516" target="_blank" class="btn-descarga">📄 Descargar PDF</a>
+            </div>
         </div>
         
         <!-- Tarxeta 2: Normativa contratación -->
-        <div class="foto">
-            <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes-galeria/documento_normativa.png" alt="Normativa contratación" style="width: 100%; height: 160px; object-fit: cover; object-position: top;">
-            <p><strong>Normativa contratación profesorado asociado (2025)</strong></p>
-            <p style="font-size: 0.8rem;">Universidade de Vigo</p>
-            <a href="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/26_06_2025_normativa_para_contratar_profesorado_asociado.pdf" target="_blank" class="btn-descarga" style="display: inline-block; margin-top: 0.5rem;">📄 Descargar PDF</a>
+        <div class="tarxeta-doc">
+            <img src="URL_RAW_IMAXE_NORMATIVA" alt="Normativa contratación">
+            <div class="contenido">
+                <p class="titulo">📄 Normativa contratación profesorado asociado (2025)</p>
+                <p class="descricion">Universidade de Vigo</p>
+                <a href="URL_RAW_NORMATIVA_CONTRATACION" target="_blank" class="btn-descarga">📄 Descargar PDF</a>
+            </div>
         </div>
         
         <!-- Tarxeta 3: Normativa POD -->
-        <div class="foto">
-            <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes-galeria/normativa_pod.png" alt="Normativa POD" style="width: 100%; height: 160px; object-fit: cover; object-position: top;">
-            <p><strong>Normativa elaboración do POD (2026-2027)</strong></p>
-            <p style="font-size: 0.8rem;">Planificación docente</p>
-            <a href="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/normativa_pod_26_27.pdf" target="_blank" class="btn-descarga" style="display: inline-block; margin-top: 0.5rem;">📄 Descargar PDF</a>
+        <div class="tarxeta-doc">
+            <img src="URL_RAW_IMAXE_POD" alt="Normativa POD">
+            <div class="contenido">
+                <p class="titulo">📅 Normativa elaboración do POD (2026-2027)</p>
+                <p class="descricion">Planificación docente</p>
+                <a href="URL_RAW_NORMATIVA_POD" target="_blank" class="btn-descarga">📄 Descargar PDF</a>
+            </div>
         </div>
         
-        <!-- Tarxeta 4: Permisos e licenzas (exemplo) -->
-        <div class="foto">
-            <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes-galeria/permisoselicenzas.png" alt="Permisos e licenzas" style="width: 100%; height: 160px; object-fit: cover; object-position: top;">
-            <p><strong>Permisos e licenzas do profesorado</strong></p>
-            <p style="font-size: 0.8rem;">Normativa e procedemento</p>
-            <a href="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes/normativa_permisos_licenzas.pdf" target="_blank" class="btn-descarga" style="display: inline-block; margin-top: 0.5rem;">📄 Descargar PDF</a>
+        <!-- Tarxeta 4: Permisos e licenzas -->
+        <div class="tarxeta-doc">
+            <img src="URL_RAW_IMAXE_PERMISOS" alt="Permisos e licenzas">
+            <div class="contenido">
+                <p class="titulo">📋 Permisos e licenzas do profesorado</p>
+                <p class="descricion">Normativa e procedemento</p>
+                <a href="URL_RAW_PERMISOS_LICENZAS" target="_blank" class="btn-descarga">📄 Descargar PDF</a>
+            </div>
         </div>
         
-        <!-- Podes engadir máis tarxetas copiando o bloque de arriba -->
+        <!-- Podes engadir máis tarxetas copiando o bloque -->
         
     </div>
 </div>
