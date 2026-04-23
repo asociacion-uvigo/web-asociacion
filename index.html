@@ -23,7 +23,7 @@
         /* TÍTULOS E BOTÓNS (manteñen peso medio para non ser demasiado finos) */
         h1, h2, h3, nav a, .btn-descarga, .btn-correo, .btn-x, .proteccion p, .proteccion button, summary {
             font-family: 'Roboto', Arial, sans-serif;
-            font-weight: 500;
+            font-weight: 200;
         }
 
         /* MENÚ: forzar Roboto Light nas ligazóns */
@@ -47,7 +47,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 400px;
+    min-height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -412,19 +412,21 @@
         #estatutos {
     margin-top: 1.5rem;
 }   
-/* TARXETAS DE DOCUMENTOS DE INTERESE */
+/* GRID PARA DOCUMENTOS DE INTERESE (4 columnas) */
 .documentos-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
-    justify-content: center;
+    justify-items: center;
+    align-items: stretch;
 }
 
 .tarxeta-doc {
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    width: 220px;
+    width: 100%;
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -438,7 +440,7 @@
 
 .tarxeta-doc img {
     width: 100%;
-    height: 130px;
+    height: 140px;
     object-fit: cover;
     object-position: top;
 }
@@ -448,10 +450,6 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-}
-
-.tarxeta-doc p {
-    margin: 0.2rem 0;
 }
 
 .tarxeta-doc .titulo {
@@ -483,8 +481,19 @@
     background: #2c3e50;
 }
 
-.prev-docs:hover, .next-docs:hover {
-    background: rgba(0,0,0,0.8);
+/* Responsividade: en móbil, 2 columnas; en pantallas moi pequenas, 1 columna */
+@media (max-width: 768px) {
+    .documentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .documentos-grid {
+        grid-template-columns: 1fr;
+    }
+}
 }
 /* FOOTER MÁIS ESTREITO */
 footer {
@@ -707,7 +716,7 @@ footer {
         </div>
     </div>
         
-<!-- DOCUMENTOS DE INTERESE - MOSAICO PEQUENO -->
+<!-- DOCUMENTOS DE INTERESE - GRID 4 COLUMNAS -->
 <div class="seccion-blanca" id="documentos">
     <h2>Documentos de interese</h2>
     <div class="documentos-grid">
@@ -752,7 +761,7 @@ footer {
             </div>
         </div>
         
-        <!-- Podes engadir máis tarxetas copiando o bloque -->
+        <!-- Podes engadir máis tarxetas (múltiplo de 4 para encaixar mellor) -->
         
     </div>
 </div>
