@@ -425,14 +425,14 @@ footer {
 }
 
 footer img {
-    max-width: 70px;
+    max-width: 50px;
     margin-bottom: 0;
 }
 
 footer p {
     margin: 0;
     font-size: 0.65rem;
-    line-height: 1.2;
+    line-height: 1.1;
 }       
 
     </style>
@@ -624,6 +624,29 @@ footer p {
 <div class="seccion-blanca" id="documentos">
     <h2>Documentos de interese</h2>
     <div class="galeria">
+        <div style="background: #f4f4f4; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+    <strong>📂 Selecciona o documento que queres descargar:</strong><br>
+    <select id="selector-documentos" style="width: 100%; padding: 8px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+        <option value="">-- Escolle un documento --</option>
+        <option value="https://www.boe.es/buscar/act.php?id=BOE-A-2023-7516">📘 Lei Orgánica 2/2023 (LOSU) - BOE</option>
+        <option value="URL_RAW_NORMATIVA_CONTRATACION">📄 Normativa contratación profesorado asociado (2025)</option>
+        <option value="URL_RAW_NORMATIVA_POD">📅 Normativa elaboración POD 2026-2027</option>
+        <option value="URL_RAW_PERMISOS_LICENZAS">📋 Permisos e licenzas do profesorado</option>
+    </select>
+    <button onclick="descargarDocumento()" class="btn-formulario" style="width: 100%; text-align: center;">📎 Descargar PDF</button>
+</div>
+
+<script>
+function descargarDocumento() {
+    var select = document.getElementById('selector-documentos');
+    var url = select.value;
+    if (url && url !== "") {
+        window.open(url, '_blank');
+    } else {
+        alert("Por favor, selecciona un documento primeiro.");
+    }
+}
+</script>
         <!-- Documento 1: Normativa contratación -->
         <div class="foto">
             <img src="https://raw.githubusercontent.com/asociacion-uvigo/web-asociacion/main/imaxes-galeria/documento_normativa.png" alt="Normativa contratación" style="width: 100%; height: 160px; object-fit: cover; object-position: top;">
