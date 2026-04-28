@@ -72,33 +72,30 @@
     padding: 1rem 2rem; /* Reduce o padding superior */
     max-width: 90%;
 }
-
 .logo-titulo {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0 !important;
-    margin-bottom: 0.5rem;
-    flex-wrap: wrap;
+    gap: 0.5rem; /* Un pequeno espazo entre eles */
+    flex-wrap: nowrap; /* FORZA que NON vaian á seguinte liña */
+    margin-bottom: 1rem;
+}
+
+.logo-banner {
+    max-width: 80px; /* Reducimos o ancho para que quepan xuntos */
+    display: inline-block;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
 }
 
 .banner-contenido h1 {
     color: white;
-    font-size: 4rem;
-    margin: 0 !important;  /* Elimina marxes superior e inferior */
-    padding: 0 !important;
+    font-size: 3rem; /* Axustamos o tamaño para que non sexa tan ancho */
+    margin: 0;
+    padding: 0;
     font-weight: 300;
     letter-spacing: 2px;
-    line-height: 1;
-}
-
-.logo-banner {
-    max-width: 180px;  /* Tamaño do logo (axusta ao teu gusto) */
-    margin-bottom: 0rem;  /* Espazo debaixo do logo antes do título */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;  /* Centra o logo horizontalmente */
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+    line-height: 1.2;
+    white-space: nowrap; /* FORZA que o título non se parta */
 }
 
 .banner-contenido .subtitulo-grande {
